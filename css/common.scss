@@ -1,0 +1,19 @@
+/*
+*/
+
+@import "common-config";
+
+
+.copyright {
+	font-size:	0.6em;
+	position:	fixed;
+	bottom:	0;
+	right:	10px;
+}
+
+body{
+	background-color: $BASE-COLOR;
+	color: $ACCENT-COLOR;
+	font-weight: bolder;
+	margin: 0;
+}

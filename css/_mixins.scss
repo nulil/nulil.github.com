@@ -1,0 +1,13 @@
+/*
+Document   : _mixins
+*/
+
+/**
+ * 角丸
+ */
+@mixin rounded($side, $radius: 10px){
+	border-#{$side}-radius: $radius;
+	-moz-border-radius-#{$side}: $radius;
+	-webkit-border-#{$side}-radius: $radius;
+}
+

@@ -1,10 +1,248 @@
 <!DOCTYPE html>
-<html>
+<!--[if lte IE 6 ]> <html lang="jp" class="jsO oldie ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="jp" class="jsO oldie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="jp" class="jsO oldie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="jp" class="jsO oldie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="jp" class="jsO"> <!--<![endif]-->
 	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+
+		<title></title>
+
+		<meta property="og:title" content="" />
+		<meta property="og:type" content="" />
+		<meta property="og:url" content="" />
+		<meta property="og:image" content="" />
+		<meta property="og:site_name" content="" />
+		<meta property="og:description" content="" />
+		<meta property="fb:admins" content="" />
+
+		<script type="text/javascript">!function(){document.documentElement.className=document.documentElement.className.replace(/(^ *| +)jsO( +| *$)/,'$1jsI$2')}()</script>
+		<script type="text/javascript" src="js/mm.min.js"></script>
+		<!--[if lt IE 9]>
+		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<style>
+			article, aside, figure, footer, header, hgroup, nav, section {	display: block;	}
+		</style>
+		<![endif]-->
+
+		<style>
+			body {/*
+				月白	#eaf4fc
+		 
+				薄瑠璃　#9EC0E2
+		 
+				瑠璃色　#1e50a2
+				群青色	#465DAA
+		 
+				千草色	#4e7da0	#92b5a9
+				藍色	#165e83
+				薄縹	#507ea4
+				灰青	#c0c6c9
+				藍鼠	#6c848d
+		 
+				撫子色　#eebbcb
+				珊瑚色	#f5b1aa
+				*/
+				background-color: #9EC0F2;
+				color: #eaf4fc;
+				font-weight: bolder;
+				margin: 0;
+			}
+			body > header{
+				position: fixed;
+				width: 100%;
+				margin: 0;
+				padding: 0;
+			}
+			body > header > h1{
+				margin: 0;
+				padding: 0.5em 2em;
+				right: 0;
+				position: relative;
+				font-size: 4em;
+				text-align: right;
+			}
+
+
+			p.copyright {font-size:0.6em; position:fixed; bottom:0; right:10px}
+
+
+
+			.menu {position: fixed;bottom: 0;left: 0}
+
+			.menu ul li a,
+			.menu ul li a:visited {display:block; text-decoration:none; text-align:left; color:#1e50a2; padding:0.5em 0 0.5em 1em; background:#c9c9a7; font-size:1em}
+
+			.menu > ul > li > a {text-align: left;font-size:2em; width:4em; padding:0.25em 1em}
+
+			.menu ul {padding:0; margin:0;list-style-type: none}
+
+			.menu ul li {position:relative}
+
+			.menu ul li li {	padding:	2px}
+
+			.menu ul li ul {	visibility:	hidden; position:	absolute}
+
+			.menu table {	border-collapse:	collapse;	margin:	0;	padding:	0;	margin:	-1px	}
+
+			.menu ul li:hover a, .menu ul li a:hover {	background:	#e9e9c7	}
+
+			.menu ul li:hover ul,
+			.menu ul li a:hover ul,
+			.menu ul li a:focus ul{
+				visibility	:	visible;
+				bottom	:	3em;
+				left	:	0}
+
+			.menu ul li:hover ul li a.sub,
+			.menu ul li a:hover ul li a.sub	{
+				background	:	#a7c9c9;
+				color	:	#000}
+
+			.menu ul li:hover ul li,
+			.menu ul li a:hover ul li	{
+				display	:	block;
+				background	:	#9EC0E2;
+				color	:	#000;
+				clear	:	both}
+
+			.menu ul li:hover ul li:hover a.sub,
+			.menu ul li a:hover ul li a:hover.sub {
+				background	:	#dfc184;
+				color	:	#000}
+
+			.menu ul li:hover ul li ul,
+			.menu ul li a:hover ul li a ul {
+				visibility	:	hidden;
+				position	:	absolute}
+
+			.menu ul li:hover ul li:hover ul li ul,
+			.menu ul li a:hover ul li a:hover ul li a ul {
+				visibility	:	hidden;
+				position	:	absolute}
+
+			.menu ul li:hover ul li a,
+			.menu ul li a:hover ul li a {
+				display	:	block;
+				background	:	#c9a7c9;
+				color	:	#000;
+				width	:	100%}
+
+			.menu ul li:hover ul li:hover ul li a,
+			.menu ul li a:hover ul li a:hover ul li a {
+				display	:	block;
+				background	:	#c9a7c9;
+				color	:	#000;
+				width	:	100%}
+
+			.menu ul li:hover ul li a:hover,
+			.menu ul li a:hover ul li a:hover {
+				background	:	#dfc184;
+				color	:	#000}
+
+			.menu ul li:hover ul li:hover ul,
+			.menu ul li a:hover ul li a:hover ul {
+				visibility	:	visible;
+				margin-left	:	100%;
+				bottom	:	0;
+				width	:	100%}
+
+			.menu ul li:hover ul li:hover ul li:hover ul,
+			.menu ul li a:hover ul li a:hover ul li a:hover ul {
+				visibility	:	visible;
+				margin-left	:	100%;
+				bottom	:	0;
+				width	:	100%}
+
+			.menu ul li:hover ul li:hover ul li a, .menu ul li a:hover ul li a:hover ul li a {
+				background	:	#dfc184;
+				color	:	#000}
+
+			.menu ul li:hover ul li:hover ul li a:hover,
+			.menu ul li a:hover ul li a:hover ul li a:hover {
+				background	:	#c9c9a7;
+				color	:	#000}
+
+
+			.menu ul	{	z-index	:	2147483645	}
+			.menu ul ul	{	z-index	:	2147483646	}
+			.menu ul ul ul	{	z-index	:	2147483647	}
+			.menu.top	{	top		:	10%	}
+
+			.menu.top ul li:hover ul,
+			.menu.top ul li a:hover ul,
+			.menu.top ul li a:focus ul{	top	:	3em	}
+
+			.menu.top ul li:hover ul li:hover ul,
+			.menu.top ul li a:hover ul li a:hover ul,
+			.menu.top ul li:hover ul li:hover ul li:hover ul,
+			.menu.top ul li a:hover ul li a:hover ul li a:hover ul {	top	:	0	}
+
+			.menu.left	{	left	:	0	}
+
+
+		</style>
 	</head>
 	<body>
-		
-		hellow git
-		
+		<header>
+			<h1>nulil</h1>
+		</header>
+
+		<section id="content">
+
+		</section>
+
+
+		<section class="menu top left">
+			<ul>
+				<li><a href="../menu/index.html">home<!--[if gte IE 7]><!--></a><!--<![endif]-->
+					<!--[if lte IE 6]><table><tr><td><![endif]-->
+					<ul>
+						<li><a href="/" title="top">top</a></li>
+						<li><a class="sub" href="/blog/" title="The zero dollar ads page">blog &gt;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+							<!--[if lte IE 6]><table><tr><td><![endif]-->
+							<ul>
+								<li><a href="../menu/form.html" title="Styling forms">styled form</a></li>
+								<li><a href="../menu/nodots.html" title="Removing active/focus borders">active focus</a></li>
+								<li><a class="sub" href="../menu/hover_click.html" title="Hover/click with no active/focus borders">hover/click &gt;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+									<ul>
+										<li><a href="../menu/form.html" title="Styling forms">styled form</a></li>
+										<li><a href="../menu/nodots.html" title="Removing active/focus borders">active focus</a></li>
+									</ul>
+									<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+								</li>
+							</ul>
+							<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+						</li>
+						<li><a href="../menu/embed.html" title="Wrapping text around images">wrapping text</a></li>
+						<li><a href="../menu/form.html" title="Styling forms">styled form</a></li>
+						<li><a href="../menu/nodots.html" title="Removing active/focus borders">active focus</a></li>
+						<li><a class="sub" href="../menu/hover_click.html" title="Hover/click with no active/focus borders">HOVER/CLICK &gt;<!--[if gte IE 7]><!--></a><!--<![endif]-->
+							<!--[if lte IE 6]><table><tr><td><![endif]-->
+							<ul>
+								<li><a href="../menu/form.html" title="Styling forms">styled form</a></li>
+								<li><a href="../menu/nodots.html" title="Removing active/focus borders">active focus</a></li>
+								<li><a href="../menu/hover_click.html" title="Hover/click with no active/focus borders">hover/click</a></li>
+							</ul>
+							<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+						</li>
+						<li><a href="../menu/shadow_boxing.html" title="Multi-position drop shadow">shadow boxing</a></li>
+						<li><a href="../menu/old_master.html" title="Image Map for detailed information">image map</a></li>
+						<li><a href="../menu/bodies.html" title="fun with background images">fun backgrounds</a></li>
+						<li><a href="../menu/fade_scroll.html" title="fade-out scrolling">fade scrolling</a></li>
+						<li><a href="../menu/em_images.html" title="em size images compared">em sized images</a></li>
+					</ul>
+
+					<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+				</li>
+			</ul>
+		</section>
+		<footer>
+
+		</footer>
+		<p class="copyright">Copyright &copy; 2012 nulil</p>
 	</body>
 </html>

@@ -1,0 +1,15 @@
+/*
+*/
+.copyright {
+  font-size: 0.6em;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+}
+
+body {
+  background-color: #9ec0e2;
+  color: #eaf4fc;
+  font-weight: bolder;
+  margin: 0;
+}
