@@ -3,11 +3,24 @@ Document   : _mixins
 */
 
 /**
- * 角丸
- */
+* 角丸
+*/
 @mixin rounded($side, $radius: 10px){
 	border-#{$side}-radius: $radius;
 	-moz-border-radius-#{$side}: $radius;
 	-webkit-border-#{$side}-radius: $radius;
 }
 
+@mixin clearfix {
+	zoom: 1;
+	&:before,
+	&:after {
+		display: block;
+		height: 0;
+		visibility: hidden;
+		content: "\0020";
+	}
+	&:after {
+		clear: both;
+	}
+}
