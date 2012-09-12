@@ -54,3 +54,22 @@ body{
 
 
 
+.menu {
+	a {
+		font-size	:	1.5em;
+	}
+	
+	ul ul ul{
+		a {
+			font-size	:	1.2em;
+		}
+		
+		ul {
+			width	:	12em;
+		}
+	}
+}
+
+input[type="text"]:not([size]){
+	width	:	10em;
+}
