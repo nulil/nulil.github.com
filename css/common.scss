@@ -1,6 +1,7 @@
 /*
 */
 
+@import "mixins";
 @import "common-config";
 @import "menu";
 
@@ -14,7 +15,7 @@
 
 body{
 	background-color: $BASE-COLOR;
-	color: $ACCENT-COLOR;
+	color: $MAIN-COLOR;
 	font-weight: bolder;
 	margin: 0;
 	
@@ -36,6 +37,19 @@ body{
 }
 
 
+
+#content{
+	
+	.column {
+		@include experimental(column-count, 2);
+		@include experimental(column-gap, 1.5em);
+		@include experimental(column-rule, 1px solid $MAIN-COLOR);
+		
+		@media only screen and (max-device-width	: 480px){
+			@include experimental(column-count, 1);
+		}
+	}
+}
 
 
 

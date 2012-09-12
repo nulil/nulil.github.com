@@ -1,6 +1,12 @@
 /*
 */
 /*
+Document   : _mixins
+*/
+/**
+* 角丸
+*/
+/*
 Document   : _menu
 Created on : 2012/09/03, 21:29:23
 Author     : atomita
@@ -14,7 +20,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .menu {
   position: fixed;
   bottom: 0;
-  left: 0;
 }
 .menu ul {
   z-index: 2147483645;
@@ -37,33 +42,24 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .menu ul li:hover a,
 .menu ul li a:hover,
 .menu ul li a:active {
-  background-color: #e9e9c7;
+  color: #cadaf5;
 }
 .menu ul li:hover ul,
 .menu ul li a:hover ul,
 .menu ul li a:active ul {
   visibility: visible;
   bottom: 3em;
-  left: 0;
 }
 .menu ul li:hover ul li,
 .menu ul li a:hover ul li,
 .menu ul li a:active ul li {
   display: block;
-  background-color: #9EC0E2;
 }
 .menu ul li:hover ul li a,
 .menu ul li a:hover ul li a,
 .menu ul li a:active ul li a {
   display: block;
-  background-color: #c9a7c9;
-  color: #000;
   width: 100%;
-}
-.menu ul li:hover ul li a.sub,
-.menu ul li a:hover ul li a.sub,
-.menu ul li a:active ul li a.sub {
-  background: #a7c9c9;
 }
 .menu ul li:hover ul li ul,
 .menu ul li a:hover ul li ul,
@@ -79,18 +75,7 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .menu ul li a:active ul li:hover a,
 .menu ul li a:active ul li a:hover,
 .menu ul li a:active ul li a:active {
-  background-color: #dfc184;
-}
-.menu ul li:hover ul li:hover a.sub,
-.menu ul li:hover ul li a:hover.sub,
-.menu ul li:hover ul li a:active.sub,
-.menu ul li a:hover ul li:hover a.sub,
-.menu ul li a:hover ul li a:hover.sub,
-.menu ul li a:hover ul li a:active.sub,
-.menu ul li a:active ul li:hover a.sub,
-.menu ul li a:active ul li a:hover.sub,
-.menu ul li a:active ul li a:active.sub {
-  background-color: #dfc184;
+  color: #cadaf5;
 }
 .menu ul li:hover ul li:hover ul,
 .menu ul li:hover ul li a:hover ul,
@@ -102,23 +87,8 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .menu ul li a:active ul li a:hover ul,
 .menu ul li a:active ul li a:active ul {
   visibility: visible;
-  margin-left: 100%;
   bottom: 0;
   width: 100%;
-}
-.menu ul li:hover ul li:hover ul li a,
-.menu ul li:hover ul li a:hover ul li a,
-.menu ul li:hover ul li a:active ul li a,
-.menu ul li a:hover ul li:hover ul li a,
-.menu ul li a:hover ul li a:hover ul li a,
-.menu ul li a:hover ul li a:active ul li a,
-.menu ul li a:active ul li:hover ul li a,
-.menu ul li a:active ul li a:hover ul li a,
-.menu ul li a:active ul li a:active ul li a {
-  display: block;
-  background-color: #c9a7c9;
-  width: 100%;
-  background-color: #dfc184;
 }
 .menu ul li:hover ul li:hover ul li ul,
 .menu ul li:hover ul li a:hover ul li ul,
@@ -130,6 +100,35 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .menu ul li a:active ul li a:hover ul li ul,
 .menu ul li a:active ul li a:active ul li ul {
   visibility: hidden;
+}
+.menu ul li:hover ul li:hover ul li:hover a,
+.menu ul li:hover ul li:hover ul li a:hover,
+.menu ul li:hover ul li:hover ul li a:active,
+.menu ul li:hover ul li a:hover ul li:hover a,
+.menu ul li:hover ul li a:hover ul li a:hover,
+.menu ul li:hover ul li a:hover ul li a:active,
+.menu ul li:hover ul li a:active ul li:hover a,
+.menu ul li:hover ul li a:active ul li a:hover,
+.menu ul li:hover ul li a:active ul li a:active,
+.menu ul li a:hover ul li:hover ul li:hover a,
+.menu ul li a:hover ul li:hover ul li a:hover,
+.menu ul li a:hover ul li:hover ul li a:active,
+.menu ul li a:hover ul li a:hover ul li:hover a,
+.menu ul li a:hover ul li a:hover ul li a:hover,
+.menu ul li a:hover ul li a:hover ul li a:active,
+.menu ul li a:hover ul li a:active ul li:hover a,
+.menu ul li a:hover ul li a:active ul li a:hover,
+.menu ul li a:hover ul li a:active ul li a:active,
+.menu ul li a:active ul li:hover ul li:hover a,
+.menu ul li a:active ul li:hover ul li a:hover,
+.menu ul li a:active ul li:hover ul li a:active,
+.menu ul li a:active ul li a:hover ul li:hover a,
+.menu ul li a:active ul li a:hover ul li a:hover,
+.menu ul li a:active ul li a:hover ul li a:active,
+.menu ul li a:active ul li a:active ul li:hover a,
+.menu ul li a:active ul li a:active ul li a:hover,
+.menu ul li a:active ul li a:active ul li a:active {
+  color: #cadaf5;
 }
 .menu ul li:hover ul li:hover ul li:hover ul,
 .menu ul li:hover ul li:hover ul li a:hover ul,
@@ -159,7 +158,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .menu ul li a:active ul li a:active ul li a:hover ul,
 .menu ul li a:active ul li a:active ul li a:active ul {
   visibility: visible;
-  margin-left: 100%;
   bottom: 0;
   width: 100%;
 }
@@ -244,7 +242,54 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .menu ul li a:active ul li a:active ul li a:active ul li:hover a,
 .menu ul li a:active ul li a:active ul li a:active ul li a:hover,
 .menu ul li a:active ul li a:active ul li a:active ul li a:active {
-  background-color: #c9c9a7;
+  color: #cadaf5;
+}
+.menu ul li:hover ul li:hover ul li:hover ul li a,
+.menu ul li:hover ul li:hover ul li a:hover ul li a,
+.menu ul li:hover ul li:hover ul li a:active ul li a,
+.menu ul li:hover ul li a:hover ul li:hover ul li a,
+.menu ul li:hover ul li a:hover ul li a:hover ul li a,
+.menu ul li:hover ul li a:hover ul li a:active ul li a,
+.menu ul li:hover ul li a:active ul li:hover ul li a,
+.menu ul li:hover ul li a:active ul li a:hover ul li a,
+.menu ul li:hover ul li a:active ul li a:active ul li a,
+.menu ul li a:hover ul li:hover ul li:hover ul li a,
+.menu ul li a:hover ul li:hover ul li a:hover ul li a,
+.menu ul li a:hover ul li:hover ul li a:active ul li a,
+.menu ul li a:hover ul li a:hover ul li:hover ul li a,
+.menu ul li a:hover ul li a:hover ul li a:hover ul li a,
+.menu ul li a:hover ul li a:hover ul li a:active ul li a,
+.menu ul li a:hover ul li a:active ul li:hover ul li a,
+.menu ul li a:hover ul li a:active ul li a:hover ul li a,
+.menu ul li a:hover ul li a:active ul li a:active ul li a,
+.menu ul li a:active ul li:hover ul li:hover ul li a,
+.menu ul li a:active ul li:hover ul li a:hover ul li a,
+.menu ul li a:active ul li:hover ul li a:active ul li a,
+.menu ul li a:active ul li a:hover ul li:hover ul li a,
+.menu ul li a:active ul li a:hover ul li a:hover ul li a,
+.menu ul li a:active ul li a:hover ul li a:active ul li a,
+.menu ul li a:active ul li a:active ul li:hover ul li a,
+.menu ul li a:active ul li a:active ul li a:hover ul li a,
+.menu ul li a:active ul li a:active ul li a:active ul li a {
+  color: #1e50a2;
+}
+.menu ul li:hover ul li:hover ul li a,
+.menu ul li:hover ul li a:hover ul li a,
+.menu ul li:hover ul li a:active ul li a,
+.menu ul li a:hover ul li:hover ul li a,
+.menu ul li a:hover ul li a:hover ul li a,
+.menu ul li a:hover ul li a:active ul li a,
+.menu ul li a:active ul li:hover ul li a,
+.menu ul li a:active ul li a:hover ul li a,
+.menu ul li a:active ul li a:active ul li a {
+  color: #1e50a2;
+  display: block;
+  width: 100%;
+}
+.menu ul li:hover ul li a,
+.menu ul li a:hover ul li a,
+.menu ul li a:active ul li a {
+  color: #1e50a2;
 }
 .menu ul li ul {
   visibility: hidden;
@@ -255,12 +300,11 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 }
 .menu ul li a {
   display: block;
-  color: #1e50a2;
   padding: 0.5em 0 0.5em 1em;
-  background-color: #c9c9a7;
   font-size: 1em;
   text-decoration: none;
   text-align: left;
+  color: #1e50a2;
 }
 .menu table {
   border-collapse: collapse;
@@ -278,6 +322,9 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
   visibility: visible;
   bottom: 3em;
   left: 0;
+}
+.menu a {
+  color: #1e50a2;
 }
 .menu.top {
   top: 10%;
@@ -298,6 +345,55 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .menu.top a:active ul a:active ul {
   top: 0;
 }
+.menu.left {
+  left: 0;
+}
+.menu.left li:hover ul,
+.menu.left li a:hover ul,
+.menu.left li a:active ul {
+  left: 0;
+  margin-left: 1em;
+}
+.menu.left li:hover ul li:hover ul,
+.menu.left li:hover ul li a:hover ul,
+.menu.left li:hover ul li a:active ul,
+.menu.left li a:hover ul li:hover ul,
+.menu.left li a:hover ul li a:hover ul,
+.menu.left li a:hover ul li a:active ul,
+.menu.left li a:active ul li:hover ul,
+.menu.left li a:active ul li a:hover ul,
+.menu.left li a:active ul li a:active ul {
+  margin-left: 100%;
+}
+.menu.left li:hover ul li:hover ul li:hover ul,
+.menu.left li:hover ul li:hover ul li a:hover ul,
+.menu.left li:hover ul li:hover ul li a:active ul,
+.menu.left li:hover ul li a:hover ul li:hover ul,
+.menu.left li:hover ul li a:hover ul li a:hover ul,
+.menu.left li:hover ul li a:hover ul li a:active ul,
+.menu.left li:hover ul li a:active ul li:hover ul,
+.menu.left li:hover ul li a:active ul li a:hover ul,
+.menu.left li:hover ul li a:active ul li a:active ul,
+.menu.left li a:hover ul li:hover ul li:hover ul,
+.menu.left li a:hover ul li:hover ul li a:hover ul,
+.menu.left li a:hover ul li:hover ul li a:active ul,
+.menu.left li a:hover ul li a:hover ul li:hover ul,
+.menu.left li a:hover ul li a:hover ul li a:hover ul,
+.menu.left li a:hover ul li a:hover ul li a:active ul,
+.menu.left li a:hover ul li a:active ul li:hover ul,
+.menu.left li a:hover ul li a:active ul li a:hover ul,
+.menu.left li a:hover ul li a:active ul li a:active ul,
+.menu.left li a:active ul li:hover ul li:hover ul,
+.menu.left li a:active ul li:hover ul li a:hover ul,
+.menu.left li a:active ul li:hover ul li a:active ul,
+.menu.left li a:active ul li a:hover ul li:hover ul,
+.menu.left li a:active ul li a:hover ul li a:hover ul,
+.menu.left li a:active ul li a:hover ul li a:active ul,
+.menu.left li a:active ul li a:active ul li:hover ul,
+.menu.left li a:active ul li a:active ul li a:hover ul,
+.menu.left li a:active ul li a:active ul li a:active ul {
+  margin-left: 100%;
+}
 .menu.right {
   right: 0;
 }
@@ -305,12 +401,7 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .menu.right li a:hover ul,
 .menu.right li a:active ul {
   right: 0;
-}
-.menu.right li:hover ul li,
-.menu.right li a:hover ul li,
-.menu.right li a:active ul li {
-  margin-left: 0%;
-  margin-right: 100%;
+  margin-right: 1em;
 }
 .menu.right li:hover ul li:hover ul,
 .menu.right li:hover ul li a:hover ul,
@@ -321,18 +412,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 .menu.right li a:active ul li:hover ul,
 .menu.right li a:active ul li a:hover ul,
 .menu.right li a:active ul li a:active ul {
-  margin-left: 0%;
-  margin-right: 100%;
-}
-.menu.right li:hover ul li:hover ul li,
-.menu.right li:hover ul li a:hover ul li,
-.menu.right li:hover ul li a:active ul li,
-.menu.right li a:hover ul li:hover ul li,
-.menu.right li a:hover ul li a:hover ul li,
-.menu.right li a:hover ul li a:active ul li,
-.menu.right li a:active ul li:hover ul li,
-.menu.right li a:active ul li a:hover ul li,
-.menu.right li a:active ul li a:active ul li {
   margin-left: 0%;
   margin-right: 100%;
 }
@@ -516,4 +595,35 @@ body > header > h1 {
   position: relative;
   font-size: 4em;
   text-align: right;
+}
+
+#content .column {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  -o-column-count: 2;
+  -ms-column-count: 2;
+  -khtml-column-count: 2;
+  column-count: 2;
+  -moz-column-gap: 1.5em;
+  -webkit-column-gap: 1.5em;
+  -o-column-gap: 1.5em;
+  -ms-column-gap: 1.5em;
+  -khtml-column-gap: 1.5em;
+  column-gap: 1.5em;
+  -moz-column-rule: 1px solid #eaf4fc;
+  -webkit-column-rule: 1px solid #eaf4fc;
+  -o-column-rule: 1px solid #eaf4fc;
+  -ms-column-rule: 1px solid #eaf4fc;
+  -khtml-column-rule: 1px solid #eaf4fc;
+  column-rule: 1px solid #eaf4fc;
+}
+@media only screen and (max-device-width: 480px) {
+  #content .column {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+    -o-column-count: 1;
+    -ms-column-count: 1;
+    -khtml-column-count: 1;
+    column-count: 1;
+  }
 }
