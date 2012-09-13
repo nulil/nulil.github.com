@@ -53,8 +53,9 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 			
 			
 			&:hover a,
+			&.current a,
 			a:hover,
-			a:active{
+			a:active	{
 				//background-color:	#e9e9c7;
 				//color	:	ie_hex_str(#abc);
 				//color	:	darken($ACCENT_COLOR, $hover_lighten);
@@ -63,6 +64,7 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 			}
 			
 			&:hover,
+			&.current,
 			a:hover,
 			a:active {
 				
@@ -206,6 +208,7 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 		top		:	10%;
 		
 		li:hover,
+		li.current,
 		a:hover,
 		a:active {
 			
@@ -251,6 +254,7 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 		
 		li {
 			&:hover,
+			&.current,
 			a:hover,
 			a:active {
 				
@@ -300,6 +304,7 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 		
 		li {
 			&:hover,
+			&.current,
 			a:hover,
 			a:active {
 				

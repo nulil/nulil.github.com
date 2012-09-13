@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!--[if lte IE 6 ]> <html lang="jp" class="jsO oldie ie6"> <![endif]-->
-<!--[if IE 7 ]> <html lang="jp" class="jsO oldie ie7"> <![endif]-->
-<!--[if IE 8 ]> <html lang="jp" class="jsO oldie ie8"> <![endif]-->
-<!--[if IE 9 ]> <html lang="jp" class="jsO oldie ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="jp" class="jsO"> <!--<![endif]-->
+<!--[if lte IE 6 ]> <html lang="jp" class="no-js oldie ie6"> <![endif]-->
+<!--[if IE 7 ]> <html lang="jp" class="no-js oldie ie7"> <![endif]-->
+<!--[if IE 8 ]> <html lang="jp" class="no-js oldie ie8"> <![endif]-->
+<!--[if IE 9 ]> <html lang="jp" class="no-js oldie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="jp" class="no-js"> <!--<![endif]-->
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<meta http-equiv="Content-Script-Type" content="text/javascript">
@@ -20,7 +20,7 @@
 		<meta property="fb:admins" content="" />
 
 		<script type="text/javascript">!function(){var d=document.documentElement;d.className=d.className.replace(/(^ *| )no-js( | *$)/,'$1js$2')}()</script>
-		<script type="text/javascript" src="js/mm.min.js"></script>
+		<script type="text/javascript" src="/js/mm.min.js"></script>
 		<!--[if lt IE 9]>
 		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<style>
@@ -29,7 +29,7 @@
 		<![endif]-->
 
 
-		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="/css/common.css" />
 	</head>
 	<body>
 		<header>
@@ -42,40 +42,65 @@
 		</article>
 
 
+		<footer>
+
+		</footer>
+		
 		<nav class="menu top left">
 			<ul>
 				<li><a href="/menu.html"><img src="/icon/format-bullets.png" /><!--[if gte IE 7]><!--></a><!--<![endif]-->
 					<!--[if lte IE 6]><table><tr><td><![endif]-->
 					<ul>
-						<li><a href="/" title="top"><img src="/icon/home.png" /></a></li>
-						<li><a class="sub" href="/blog/" title="blog"><img src="/icon/quill.png" /><!--[if gte IE 7]><!--></a><!--<![endif]-->
+						<li>
+							<a href="/" title="top"><img src="/icon/home.png" /><!--[if gte IE 7]><!--></a><!--<![endif]-->
 							<!--[if lte IE 6]><table><tr><td><![endif]-->
 							<ul>
+								<li>home</li>
+							</ul>
+							<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+						</li>
+						<li><a href="/blog/" title="blog"><img src="/icon/quill.png" /><!--[if gte IE 7]><!--></a><!--<![endif]-->
+							<!--[if lte IE 6]><table><tr><td><![endif]-->
+							<ul>
+								<li>blog</li>
 								<!--
 								<li><a href="/blog/" title="blog top"><img src="/icon/paper-clip.png" /></a></li>
 								-->
 								<li><a href="/blog/categoly/" title="categolies"><img src="/icon/folder.png" /><!--[if gte IE 7]><!--></a><!--<![endif]-->
 									<ul>
-										<li><a href="/categoly/1" title="">cat1</a></li>
-										<li><a href="/categoly/2" title="">cat2</a></li>
+										<li>categoly</li>
+										<li><a href="/categoly/clojure/" title="">clojure</a></li>
+										<li><a href="/categoly/scala/" title="">scala</a></li>
+										<li><a href="/categoly/javascript/" title="">javascript</a></li>
+										<li><a href="/categoly/whatnot/" title="">whatnot</a></li>
 									</ul>
 									<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 								</li>
-								<li><a class="blog_tags" href="/blog/tags/" title="tags"><img src="/icon/tag.png" /><!--[if gte IE 7]><!--></a><!--<![endif]-->
+								<li class="blog_tag"><a href="/blog/tags/" title="tag"><img src="/icon/tag.png" /><!--[if gte IE 7]><!--></a><!--<![endif]-->
 									<ul>
-										<li>tag,tag</li>
+										<li>tag</li>
+										<li></li>
+									</ul>
+									<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+								</li>
+								<li class="blog_search"><a href="/blog/search/" title="blog"><img src="/icon/search.png" /><!--[if gte IE 7]><!--></a><!--<![endif]-->
+									<!--[if lte IE 6]><table><tr><td><![endif]-->
+									<ul>
+										<li>serch</li>
+										<li>
+											<div><input type="text" /><button>serch</button></div>
+										</li>
 									</ul>
 									<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 								</li>
 							</ul>
 							<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 						</li>
-						<li><a class="sub" href="/blog/" title="blog"><img src="/icon/search.png" /><!--[if gte IE 7]><!--></a><!--<![endif]-->
-							<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+						<li><a href="/repository/" title="repository"><img src="/icon/folder.png" /><!--[if gte IE 7]><!--></a><!--<![endif]-->
 							<ul>
-								<li>
-									<div><input type="text" /><button>serch</button></div>
-								</li>
+								<li>repository</li>
+								<li></li>
 							</ul>
 							<!--[if lte IE 6]></td></tr></table></a><![endif]-->
 						</li>
@@ -85,9 +110,6 @@
 				</li>
 			</ul>
 		</nav>
-		<footer>
-
-		</footer>
 		<p class="copyright">Copyright &copy; 2012 nulil</p>
 	</body>
 </html>
