@@ -30,7 +30,7 @@ Document   : _mixins
 }
 
 
-@mixin background-rgba($r,$g,$b,$a,
+@mixin background-rgba($rgb,$a,
 $moz      : $experimental-support-for-mozilla,
 $webkit   : $experimental-support-for-webkit,
 $o        : $experimental-support-for-opera,
@@ -42,18 +42,20 @@ $official : true) {
 	// with an alpha transparency value.
 	
 	@if experimental-support-for-microsoft {
-		$color: ie_hex_str(rgba($r,$g,$b,$a));
+		$color: ie_hex_str(rgba($rgb,$a));
 		//$value: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=##{$color},endColorstr=##{$color})");
-		$value: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr={$color},endColorstr={$color})");
+		$value: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#{$color},endColorstr=#{$color})");
 		
-		background-color: transparent\9;
+		//background-color: transparent\9;
+		background-color: transparent;
 		-ms-filter: $value;
 		filter: $value;
 		zoom: 1;
 	}
 	
 	// Good browsers.
-	@include experimental(background-color, rgba($r,$g,$b,$a),$moz,$webkit,$o,false,$khtml,$official);
+	//@include experimental(background-color, rgba($rgb,$a),$moz,$webkit,$o,false,$khtml,$official);
+	background-color	:	rgba($rgb,$a);
 }
 
 @mixin text3d($color) {

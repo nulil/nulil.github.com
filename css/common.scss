@@ -51,9 +51,14 @@ body{
 	}
 }
 
+input[type="text"]:not([size]){
+	width	:	10em;
+}
 
 
 
+
+// menu調整
 .menu {
 	a {
 		font-size	:	1.5em;
@@ -65,11 +70,81 @@ body{
 		}
 		
 		ul {
-			width	:	12em;
+			width	:	8em;
 		}
 	}
-}
-
-input[type="text"]:not([size]){
-	width	:	10em;
+	
+	li{
+		&.blog_tag,
+		&.search{
+			display	:	none;
+		}
+	}
+	
+	li{
+		&:first-child{
+			display	:	none;
+		}
+		&:last-child{
+			display	:	block;
+		}
+	}
+	&.top li{
+		&:first-child{
+			display	:	block;
+		}
+		&:last-child{
+			display	:	none;
+		}
+	}
+	
+	ul{
+		a{
+			@include rounded("", 1em);
+			text-align	:	center;
+		}
+		
+		li:hover a,
+		a:hover,
+		a:active{
+			@include background-rgba( $ACCENT_COLOR, 0.5 );
+		}
+		li:hover,
+		a:hover,
+		a:active{
+			a{
+				background	:	transparent;
+			}
+			li:hover a,
+			a:hover,
+			a:active{
+				@include background-rgba( $ACCENT_COLOR, 0.5 );
+			}
+			
+			li:hover,
+			a:hover,
+			a:active{
+				a{
+					background	:	transparent;
+				}
+				li:hover a,
+				a:hover,
+				a:active{
+					@include background-rgba( $ACCENT_COLOR, 0.5 );
+				}
+				li:hover,
+				a:hover,
+				a:active{
+					a{
+						background	:	transparent;
+					}
+					li:hover a,
+					a:hover,
+					a:active{
+						@include background-rgba( $ACCENT_COLOR, 0.5 );
+					}
+				}
+			}
+		}
+	}
 }
