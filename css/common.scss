@@ -37,7 +37,7 @@ body{
 	}
 	
 	> article {
-		margin-top	:	7em;
+		margin	:	7em;
 	}
 }
 
@@ -150,6 +150,19 @@ input[type="text"]:not([size]){
 					}
 				}
 			}
+		}
+	}
+}
+
+
+
+
+nav.index-main-nav {
+	> div {
+		float	:	left;
+		
+		&:last-child {
+			@include clearfix();
 		}
 	}
 }

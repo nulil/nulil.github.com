@@ -17,50 +17,38 @@ Purpose of the stylesheet follows.
 TODO customize this sample style
 Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000315}}
 .menu {
   position: fixed;
   bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000326}}
   .menu ul {
     z-index: 2147483644; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000328}}
     .menu ul ul {
       z-index: 2147483645; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000330}}
       .menu ul ul ul {
         z-index: 2147483646; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000332}}
         .menu ul ul ul ul {
           z-index: 2147483647; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000342}}
   .menu ul {
     padding: 0;
     margin: 0;
     list-style-type: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000347}}
     .menu ul li {
       position: relative; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000350}}
       .menu ul li img {
         height: 2em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000358}}
       .menu ul li:hover a, .menu ul li.current a,
       .menu ul li a:hover,
       .menu ul li a:active {
         color: #cadaf5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000371}}
       .menu ul li:hover ul, .menu ul li.current ul,
       .menu ul li a:hover ul,
       .menu ul li a:active ul {
         display: block;
         bottom: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000388}}
         .menu ul li:hover ul li ul, .menu ul li.current ul li ul,
         .menu ul li a:hover ul li ul,
         .menu ul li a:active ul li ul {
           display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\0000395}}
         .menu ul li:hover ul li:hover a,
         .menu ul li:hover ul li a:hover,
         .menu ul li:hover ul li a:active, .menu ul li.current ul li:hover a,
@@ -73,7 +61,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
         .menu ul li a:active ul li a:hover,
         .menu ul li a:active ul li a:active {
           color: #cadaf5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003107}}
         .menu ul li:hover ul li:hover ul,
         .menu ul li:hover ul li a:hover ul,
         .menu ul li:hover ul li a:active ul, .menu ul li.current ul li:hover ul,
@@ -87,7 +74,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
         .menu ul li a:active ul li a:active ul {
           display: block;
           bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003113}}
           .menu ul li:hover ul li:hover ul li ul,
           .menu ul li:hover ul li a:hover ul li ul,
           .menu ul li:hover ul li a:active ul li ul, .menu ul li.current ul li:hover ul li ul,
@@ -100,7 +86,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
           .menu ul li a:active ul li a:hover ul li ul,
           .menu ul li a:active ul li a:active ul li ul {
             display: none; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003120}}
           .menu ul li:hover ul li:hover ul li:hover a,
           .menu ul li:hover ul li:hover ul li a:hover,
           .menu ul li:hover ul li:hover ul li a:active,
@@ -137,7 +122,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
           .menu ul li a:active ul li a:active ul li a:hover,
           .menu ul li a:active ul li a:active ul li a:active {
             color: #cadaf5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003127}}
           .menu ul li:hover ul li:hover ul li:hover ul,
           .menu ul li:hover ul li:hover ul li a:hover ul,
           .menu ul li:hover ul li:hover ul li a:active ul,
@@ -175,7 +159,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
           .menu ul li a:active ul li a:active ul li a:active ul {
             display: block;
             bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003135}}
             .menu ul li:hover ul li:hover ul li:hover ul li:hover a,
             .menu ul li:hover ul li:hover ul li:hover ul li a:hover,
             .menu ul li:hover ul li:hover ul li:hover ul li a:active,
@@ -284,7 +267,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
             .menu ul li a:active ul li a:active ul li a:active ul li a:hover,
             .menu ul li a:active ul li a:active ul li a:active ul li a:active {
               color: #cadaf5; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003139}}
             .menu ul li:hover ul li:hover ul li:hover ul li a,
             .menu ul li:hover ul li:hover ul li a:hover ul li a,
             .menu ul li:hover ul li:hover ul li a:active ul li a,
@@ -321,7 +303,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
             .menu ul li a:active ul li a:active ul li a:hover ul li a,
             .menu ul li a:active ul li a:active ul li a:active ul li a {
               color: #1e50a2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003147}}
           .menu ul li:hover ul li:hover ul li a,
           .menu ul li:hover ul li a:hover ul li a,
           .menu ul li:hover ul li a:active ul li a, .menu ul li.current ul li:hover ul li a,
@@ -334,47 +315,37 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
           .menu ul li a:active ul li a:hover ul li a,
           .menu ul li a:active ul li a:active ul li a {
             color: #1e50a2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003156}}
         .menu ul li:hover ul li a, .menu ul li.current ul li a,
         .menu ul li a:hover ul li a,
         .menu ul li a:active ul li a {
           color: #1e50a2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003164}}
       .menu ul li ul {
         display: none;
         position: absolute; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003170}}
       .menu ul li li {
         padding: 2px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003174}}
       .menu ul li a {
         padding: 0.25em 0.25em;
         text-decoration: none;
         color: #1e50a2; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003187}}
   .menu table {
     border-collapse: collapse;
     margin: 0;
     padding: 0;
     margin: -1px; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003200}}
   .menu a:active + ul {
     display: block;
     bottom: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003207}}
   .menu a {
     color: #1e50a2;
     display: block; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003213}}
   .menu.top {
     top: 10%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003221}}
     .menu.top li:hover ul,
     .menu.top li.current ul,
     .menu.top a:hover ul,
     .menu.top a:active ul {
       top: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003228}}
       .menu.top li:hover ul li:hover ul,
       .menu.top li:hover ul a:hover ul,
       .menu.top li:hover ul a:active ul,
@@ -388,16 +359,13 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
       .menu.top a:active ul a:hover ul,
       .menu.top a:active ul a:active ul {
         top: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003258}}
   .menu.left {
     left: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003267}}
     .menu.left li:hover ul, .menu.left li.current ul,
     .menu.left li a:hover ul,
     .menu.left li a:active ul {
       left: 0;
       margin-left: 0.25em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003276}}
       .menu.left li:hover ul li:hover ul,
       .menu.left li:hover ul li a:hover ul,
       .menu.left li:hover ul li a:active ul, .menu.left li.current ul li:hover ul,
@@ -410,7 +378,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
       .menu.left li a:active ul li a:hover ul,
       .menu.left li a:active ul li a:active ul {
         margin-left: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003287}}
         .menu.left li:hover ul li:hover ul li:hover ul,
         .menu.left li:hover ul li:hover ul li a:hover ul,
         .menu.left li:hover ul li:hover ul li a:active ul,
@@ -447,13 +414,10 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
         .menu.left li a:active ul li a:active ul li a:hover ul,
         .menu.left li a:active ul li a:active ul li a:active ul {
           margin-left: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003304}}
   .menu.right, .menu:not(.left) {
     right: 0; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003307}}
     .menu.right > ul, .menu:not(.left) > ul {
       margin-right: 0.75em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003317}}
     .menu.right li:hover ul, .menu.right li.current ul,
     .menu.right li a:hover ul,
     .menu.right li a:active ul, .menu:not(.left) li:hover ul, .menu:not(.left) li.current ul,
@@ -461,7 +425,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
     .menu:not(.left) li a:active ul {
       right: 0;
       margin-right: 0.25em; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003326}}
       .menu.right li:hover ul li:hover ul,
       .menu.right li:hover ul li a:hover ul,
       .menu.right li:hover ul li a:active ul, .menu.right li.current ul li:hover ul,
@@ -484,7 +447,6 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
       .menu:not(.left) li a:active ul li a:hover ul,
       .menu:not(.left) li a:active ul li a:active ul {
         margin-right: 100%; }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/home\/linxarc\/workspace\/github\/nulil\.github\.com\/css\/_menu\.scss}line{font-family:\00003337}}
         .menu.right li:hover ul li:hover ul li:hover ul,
         .menu.right li:hover ul li:hover ul li a:hover ul,
         .menu.right li:hover ul li:hover ul li a:active ul,
@@ -556,39 +518,33 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
         .menu:not(.left) li a:active ul li a:active ul li a:active ul {
           margin-right: 100%; }
 
-@media -sass-debug-info{filename{}line{font-family:\000039}}
 .copyright {
   font-size: 0.6em;
   position: fixed;
   bottom: 0;
   right: 10px; }
 
-@media -sass-debug-info{filename{}line{font-family:\0000316}}
 body {
   background-color: #9ec0e2;
   color: #eaf4fc;
   font-weight: bolder;
   margin: 0; }
-@media -sass-debug-info{filename{}line{font-family:\0000322}}
   body > header {
     position: fixed;
     width: 100%;
     margin: 0;
     padding: 0;
     top: 0; }
-@media -sass-debug-info{filename{}line{font-family:\0000329}}
     body > header > h1 {
       margin: 0;
-      padding: 0.5em 2em;
+      padding: 0.5em;
       right: 0;
       position: relative;
       font-size: 4em;
       text-align: right; }
-@media -sass-debug-info{filename{}line{font-family:\0000339}}
   body > article {
-    margin-top: 7em; }
+    margin: 7em; }
 
-@media -sass-debug-info{filename{}line{font-family:\0000348}}
 #content .column {
   -moz-column-count: 2;
   -webkit-column-count: 2;
@@ -609,7 +565,6 @@ body {
   -khtml-column-rule: 1px solid #eaf4fc;
   column-rule: 1px solid #eaf4fc; }
   @media only screen and (max-device-width: 480px) {
-@media -sass-debug-info{filename{}line{font-family:\0000348}}
     #content .column {
       -moz-column-count: 1;
       -webkit-column-count: 1;
@@ -618,35 +573,25 @@ body {
       -khtml-column-count: 1;
       column-count: 1; } }
 
-@media -sass-debug-info{filename{}line{font-family:\0000359}}
 input[type="text"]:not([size]) {
   width: 10em; }
 
-@media -sass-debug-info{filename{}line{font-family:\0000368}}
 .menu a {
   font-size: 1.5em; }
-@media -sass-debug-info{filename{}line{font-family:\0000373}}
 .menu ul ul ul a {
   font-size: 1.2em; }
-@media -sass-debug-info{filename{}line{font-family:\0000377}}
 .menu ul ul ul ul {
   width: 8em; }
-@media -sass-debug-info{filename{}line{font-family:\0000384}}
 .menu li.blog_tag, .menu li.search {
   display: none; }
-@media -sass-debug-info{filename{}line{font-family:\0000390}}
 .menu li:first-child {
   display: none; }
-@media -sass-debug-info{filename{}line{font-family:\0000393}}
 .menu li:last-child {
   display: block; }
-@media -sass-debug-info{filename{}line{font-family:\0000398}}
 .menu.top li:first-child {
   display: block; }
-@media -sass-debug-info{filename{}line{font-family:\00003101}}
 .menu.top li:last-child {
   display: none; }
-@media -sass-debug-info{filename{}line{font-family:\00003107}}
 .menu ul a {
   -moz-border-radius: 1em;
   -webkit-border-radius: 1em;
@@ -655,7 +600,6 @@ input[type="text"]:not([size]) {
   -khtml-border-radius: 1em;
   border-radius: 1em;
   text-align: center; }
-@media -sass-debug-info{filename{}line{font-family:\00003114}}
 .menu ul li:hover a,
 .menu ul a:hover,
 .menu ul a:active {
@@ -664,12 +608,10 @@ input[type="text"]:not([size]) {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
   zoom: 1;
   background-color: rgba(30, 80, 162, 0.5); }
-@media -sass-debug-info{filename{}line{font-family:\00003120}}
 .menu ul li:hover a,
 .menu ul a:hover a,
 .menu ul a:active a {
   background: transparent; }
-@media -sass-debug-info{filename{}line{font-family:\00003125}}
 .menu ul li:hover li:hover a,
 .menu ul li:hover a:hover,
 .menu ul li:hover a:active,
@@ -684,7 +626,6 @@ input[type="text"]:not([size]) {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
   zoom: 1;
   background-color: rgba(30, 80, 162, 0.5); }
-@media -sass-debug-info{filename{}line{font-family:\00003132}}
 .menu ul li:hover li:hover a,
 .menu ul li:hover a:hover a,
 .menu ul li:hover a:active a,
@@ -695,7 +636,6 @@ input[type="text"]:not([size]) {
 .menu ul a:active a:hover a,
 .menu ul a:active a:active a {
   background: transparent; }
-@media -sass-debug-info{filename{}line{font-family:\00003137}}
 .menu ul li:hover li:hover li:hover a,
 .menu ul li:hover li:hover a:hover,
 .menu ul li:hover li:hover a:active,
@@ -728,7 +668,6 @@ input[type="text"]:not([size]) {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
   zoom: 1;
   background-color: rgba(30, 80, 162, 0.5); }
-@media -sass-debug-info{filename{}line{font-family:\00003143}}
 .menu ul li:hover li:hover li:hover a,
 .menu ul li:hover li:hover a:hover a,
 .menu ul li:hover li:hover a:active a,
@@ -757,7 +696,6 @@ input[type="text"]:not([size]) {
 .menu ul a:active a:active a:hover a,
 .menu ul a:active a:active a:active a {
   background: transparent; }
-@media -sass-debug-info{filename{}line{font-family:\00003148}}
 .menu ul li:hover li:hover li:hover li:hover a,
 .menu ul li:hover li:hover li:hover a:hover,
 .menu ul li:hover li:hover li:hover a:active,
@@ -844,3 +782,15 @@ input[type="text"]:not([size]) {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
   zoom: 1;
   background-color: rgba(30, 80, 162, 0.5); }
+
+nav.index-main-nav > div {
+  float: left; }
+  nav.index-main-nav > div:last-child {
+    zoom: 1; }
+    nav.index-main-nav > div:last-child:before, nav.index-main-nav > div:last-child:after {
+      display: block;
+      height: 0;
+      visibility: hidden;
+      content: "\0020"; }
+    nav.index-main-nav > div:last-child:after {
+      clear: both; }
