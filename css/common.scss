@@ -20,23 +20,24 @@ body{
 	margin: 0;
 	
 	> header {
-		position: fixed;
-		width: 100%;
-		margin: 0;
-		padding: 0;
+		position	:	fixed;
+		width		:	100%;
+		margin		:	0;
+		padding		:	0;
+		top			:	0;
 		
 		> h1{
-			margin: 0;
-			padding: 0.5em 2em;
-			right: 0;
-			position: relative;
-			font-size: 4em;
-			text-align: right;
+			margin		: 0;
+			padding		: 0.5em 2em;
+			right		: 0;
+			position	: relative;
+			font-size	: 4em;
+			text-align	: right;
 		}
 	}
 	
 	> article {
-		margin-top	:	5em;
+		margin-top	:	7em;
 	}
 }
 
