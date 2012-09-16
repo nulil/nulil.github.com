@@ -176,3 +176,13 @@ nav.index-main-nav {
 		}
 	}
 }
+
+
+.menu {
+	.amazon {
+		> iframe {
+			@include rounded(top-left, 1em);
+			@include rounded(top-right, 1em);
+		}
+	}
+}

@@ -804,3 +804,17 @@ nav.index-main-nav {
       filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
       zoom: 1;
       background-color: rgba(30, 80, 162, 0.25); }
+
+.menu .amazon > iframe {
+  -moz-border-top-left-radius: 1em;
+  -webkit-border-top-left-radius: 1em;
+  -o-border-top-left-radius: 1em;
+  -ms-border-top-left-radius: 1em;
+  -khtml-border-top-left-radius: 1em;
+  border-top-left-radius: 1em;
+  -moz-border-top-right-radius: 1em;
+  -webkit-border-top-right-radius: 1em;
+  -o-border-top-right-radius: 1em;
+  -ms-border-top-right-radius: 1em;
+  -khtml-border-top-right-radius: 1em;
+  border-top-right-radius: 1em; }
