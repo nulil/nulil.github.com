@@ -604,10 +604,10 @@ input[type="text"]:not([size]) {
 .menu ul a:hover,
 .menu ul a:active {
   background-color: transparent;
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
   zoom: 1;
-  background-color: rgba(30, 80, 162, 0.5); }
+  background-color: rgba(30, 80, 162, 0.25); }
 .menu ul li:hover a,
 .menu ul a:hover a,
 .menu ul a:active a {
@@ -622,10 +622,10 @@ input[type="text"]:not([size]) {
 .menu ul a:active a:hover,
 .menu ul a:active a:active {
   background-color: transparent;
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
   zoom: 1;
-  background-color: rgba(30, 80, 162, 0.5); }
+  background-color: rgba(30, 80, 162, 0.25); }
 .menu ul li:hover li:hover a,
 .menu ul li:hover a:hover a,
 .menu ul li:hover a:active a,
@@ -664,10 +664,10 @@ input[type="text"]:not([size]) {
 .menu ul a:active a:active a:hover,
 .menu ul a:active a:active a:active {
   background-color: transparent;
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
   zoom: 1;
-  background-color: rgba(30, 80, 162, 0.5); }
+  background-color: rgba(30, 80, 162, 0.25); }
 .menu ul li:hover li:hover li:hover a,
 .menu ul li:hover li:hover a:hover a,
 .menu ul li:hover li:hover a:active a,
@@ -778,19 +778,29 @@ input[type="text"]:not([size]) {
 .menu ul a:active a:active a:active a:hover,
 .menu ul a:active a:active a:active a:active {
   background-color: transparent;
-  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#801E50A2,endColorstr=#801E50A2);
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
   zoom: 1;
-  background-color: rgba(30, 80, 162, 0.5); }
+  background-color: rgba(30, 80, 162, 0.25); }
 
-nav.index-main-nav > div {
-  float: left; }
-  nav.index-main-nav > div:last-child {
-    zoom: 1; }
-    nav.index-main-nav > div:last-child:before, nav.index-main-nav > div:last-child:after {
-      display: block;
-      height: 0;
-      visibility: hidden;
-      content: "\0020"; }
-    nav.index-main-nav > div:last-child:after {
-      clear: both; }
+nav.index-main-nav {
+  text-align: center;
+  width: 100%; }
+  nav.index-main-nav > div {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 1em; }
+    nav.index-main-nav > div img {
+      -moz-border-radius: 2em;
+      -webkit-border-radius: 2em;
+      -o-border-radius: 2em;
+      -ms-border-radius: 2em;
+      -khtml-border-radius: 2em;
+      border-radius: 2em; }
+    nav.index-main-nav > div a:hover img,
+    nav.index-main-nav > div a img:hover {
+      background-color: transparent;
+      -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
+      filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#401E50A2,endColorstr=#401E50A2);
+      zoom: 1;
+      background-color: rgba(30, 80, 162, 0.25); }

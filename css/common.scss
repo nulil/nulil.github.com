@@ -112,7 +112,7 @@ input[type="text"]:not([size]){
 		li:hover a,
 		a:hover,
 		a:active{
-			@include background-rgba( $ACCENT_COLOR, 0.5 );
+			@include background-rgba( $ACCENT_COLOR, 0.25 );
 		}
 		li:hover,
 		a:hover,
@@ -123,7 +123,7 @@ input[type="text"]:not([size]){
 			li:hover a,
 			a:hover,
 			a:active{
-				@include background-rgba( $ACCENT_COLOR, 0.5 );
+				@include background-rgba( $ACCENT_COLOR, 0.25 );
 			}
 			
 			li:hover,
@@ -135,7 +135,7 @@ input[type="text"]:not([size]){
 				li:hover a,
 				a:hover,
 				a:active{
-					@include background-rgba( $ACCENT_COLOR, 0.5 );
+					@include background-rgba( $ACCENT_COLOR, 0.25 );
 				}
 				li:hover,
 				a:hover,
@@ -146,7 +146,7 @@ input[type="text"]:not([size]){
 					li:hover a,
 					a:hover,
 					a:active{
-						@include background-rgba( $ACCENT_COLOR, 0.5 );
+						@include background-rgba( $ACCENT_COLOR, 0.25 );
 					}
 				}
 			}
@@ -158,11 +158,21 @@ input[type="text"]:not([size]){
 
 
 nav.index-main-nav {
+	text-align: center;
+	width	:	100%;
+	
 	> div {
-		float	:	left;
+		display	:	inline-block;
+		margin	:	0 auto;
+		padding	:	1em;
 		
-		&:last-child {
-			@include clearfix();
+		img {
+			@include rounded("", 2em);
+		}
+		
+		a:hover img,
+		a img:hover {
+			@include background-rgba( $ACCENT_COLOR, 0.25 );
 		}
 	}
 }
