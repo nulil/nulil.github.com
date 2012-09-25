@@ -4,9 +4,9 @@ Document   : _mixins
 
 @import "experimental";
 
-/**
-* 角丸
-*/
+//
+// 角丸
+//
 @mixin rounded($side: "", $radius: 10px){
 	@if $side == "" {
 		@include experimental(border-radius, $radius);
