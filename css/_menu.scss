@@ -26,6 +26,169 @@
 	position	:	fixed;
 	bottom		:	0;
 	
+//	// mixinの再起はできないっぽい
+//	// perfrom.rb のhandle_include_loop!のエラー投げてるところで(423行目あたり)、true返すようにすれば、とりあえず再起もできるようになる
+//	@mixin ul-loop($i){
+//		@if 0 < $i {  
+//			ul {
+//				//visibility	:	visible;
+//				display		:	block;
+//				
+//				li {
+//					ul {
+//						//visibility	:	hidden;
+//						display		:	none;
+//					}
+//					
+//					&:hover a,
+//					&.current a,
+//					a:hover,
+//					a:active	{
+//						//background-color:	#e9e9c7;
+//						//color	:	darken($ACCENT_COLOR, $hover_lighten);
+//						color	:	lighten($ACCENT_COLOR, $hover_lighten);
+//						
+//					}
+//					
+//					&:hover,
+//					&.current,
+//					a:hover,
+//					a:active {
+//						@include ul-loop($i - 1);
+//					}
+//					
+//					a {
+//						color	:	$ACCENT_COLOR;
+//					}
+//				}
+//			}
+//		}
+//	}
+//	@include ul-loop(4);
+	
+	
+	// 大まかな段組構造		mixinの再起でやりたい(ﾉд')
+	ul {
+		//visibility	:	visible;
+		display		:	block;
+		
+		li {
+			ul {
+				//visibility	:	hidden;
+				display		:	none;
+			}
+			
+			&:hover a,
+			&.current a,
+			a:hover,
+			a:active	{
+				//background-color:	#e9e9c7;
+				//color	:	darken($ACCENT_COLOR, $hover_lighten);
+				color	:	lighten($ACCENT_COLOR, $hover_lighten);
+				
+			}
+			
+			&:hover,
+			&.current,
+			a:hover,
+			a:active {
+				ul {
+					//visibility	:	visible;
+					display		:	block;
+					
+					li {
+						ul {
+							//visibility	:	hidden;
+							display		:	none;
+						}
+						
+						&:hover a,
+						&.current a,
+						a:hover,
+						a:active	{
+							//background-color:	#e9e9c7;
+							//color	:	darken($ACCENT_COLOR, $hover_lighten);
+							color	:	lighten($ACCENT_COLOR, $hover_lighten);
+							
+						}
+						
+						&:hover,
+						&.current,
+						a:hover,
+						a:active {
+							ul {
+								//visibility	:	visible;
+								display		:	block;
+								
+								li {
+									ul {
+										//visibility	:	hidden;
+										display		:	none;
+									}
+									
+									&:hover a,
+									&.current a,
+									a:hover,
+									a:active	{
+										//background-color:	#e9e9c7;
+										//color	:	darken($ACCENT_COLOR, $hover_lighten);
+										color	:	lighten($ACCENT_COLOR, $hover_lighten);
+										
+									}
+									
+									&:hover,
+									&.current,
+									a:hover,
+									a:active {
+										ul {
+											//visibility	:	visible;
+											display		:	block;
+											
+											li {
+												ul {
+													//visibility	:	hidden;
+													display		:	none;
+												}
+												
+												&:hover a,
+												&.current a,
+												a:hover,
+												a:active	{
+													//background-color:	#e9e9c7;
+													//color	:	darken($ACCENT_COLOR, $hover_lighten);
+													color	:	lighten($ACCENT_COLOR, $hover_lighten);
+													
+												}
+												
+												a {
+													color	:	$ACCENT_COLOR;
+												}
+											}
+										}
+									}
+									
+									a {
+										color	:	$ACCENT_COLOR;
+									}
+								}
+							}
+						}
+						
+						a {
+							color	:	$ACCENT_COLOR;
+						}
+					}
+				}
+			}
+			
+			a {
+				color	:	$ACCENT_COLOR;
+			}
+		}
+	}
+	
+	
+	// 細かな設定
 	ul {
 		padding	:	0;
 		margin	:	0;
@@ -37,120 +200,28 @@
 			img {
 				height	:	2em;
 			}
-			
-			
-			&:hover a,
-			&.current a,
-			a:hover,
-			a:active	{
-				//background-color:	#e9e9c7;
-				//color	:	ie_hex_str(#abc);
-				//color	:	darken($ACCENT_COLOR, $hover_lighten);
-				color	:	lighten($ACCENT_COLOR, $hover_lighten);
-				
-			}
-			
 			&:hover,
 			&.current,
 			a:hover,
 			a:active {
-				
 				ul{
-					//visibility	:	visible;
-					display		:	block;
 					bottom		:	100%;
 					
-					li{
-						//background-color:	#9EC0E2;
-						
-						a{
-							//background-color:	#c9a7c9;
-							//color			:	#000;
-							
-							&.sub{
-								//background-color:	#a7c9c9;
-							}
-						}
-						
-						ul {
-							//visibility	:	hidden;
-							display		:	none;
-						}
-						
-						&:hover a,
-						a:hover,
-						a:active{
-							color	:	lighten($ACCENT_COLOR, $hover_lighten);
-							//background-color:	#dfc184;
-							&.sub {
-								//background-color:	#dfc184;
-							}
-						}
-						
+					li {
 						&:hover,
 						a:hover,
 						a:active {
 							
 							ul {
-								//visibility	:	visible;
-								display		:	block;
 								bottom		:	0;
-								
-								li {
-									ul {
-										//visibility	:	hidden;
-										display		:	none;
-									}
-									
-									&:hover a,
-									a:hover,
-									a:active{
-										color	:	lighten($ACCENT_COLOR, $hover_lighten);
-									}
-									
-									&:hover,
-									a:hover,
-									a:active {
-										ul {
-											//visibility	:	visible;
-											display		:	block;
-											bottom		:	0;
-											
-											li {
-												&:hover a,
-												a:hover,
-												a:active {
-													color	:	lighten($ACCENT_COLOR, $hover_lighten);
-													//background-color	:	#c9c9a7;
-												}
-												a {
-													color	:	$ACCENT_COLOR;
-												}
-											}
-										}
-										
-									}
-									
-									a {
-										color			:	$ACCENT_COLOR;
-										//background-color:	#c9a7c9;
-									}
-									
-								}
 							}
 						}
-						
-						a {
-							color	:	$ACCENT_COLOR;
-						}
 					}
-					
 				}
+				
 			}
 			
 			ul {
-				//visibility	:	hidden;
-				display		:	none;
 				position	:	absolute
 			}
 			
@@ -159,15 +230,12 @@
 			}
 			
 			a{
-				//padding			:	$row_blank 0 $row_blank $col_blank * 2;
 				padding			:	$row_blank $col_blank;
 				//background-color:	#c9c9a7;
 				text:	{
 					decoration	:	none;
 				}
-				color	:	$ACCENT_COLOR;
 			}
-			
 		}
 	}
 	
@@ -188,7 +256,6 @@
 		//visibility	:	visible;
 		display		:	block;
 		bottom		:	0;
-		//left		:	0;
 	}
 	
 	a {
@@ -220,28 +287,6 @@
 		}
 	}
 	
-	//	&.bottom {
-	//		bottom		:	0;
-	//		
-	//		li:hover,
-	//		a:hover,
-	//		a:active {
-	//			
-	//			ul {
-	//				bottom	:	3em;
-	//				
-	//				li:hover,
-	//				a:hover,
-	//				a:active {
-	//					
-	//					ul {
-	//						bottom	:	0;
-	//					}
-	//				}
-	//			}
-	//		}
-	//	}
-	
 	&.left {
 		left	:	0;
 		
@@ -256,30 +301,34 @@
 					margin-left	:	$col_blank;
 					
 					li {
-						
-						&:hover,
-						a:hover,
-						a:active {
-							ul {
-								
-								margin:{
-									left	:	100%;
-								}
-								
-								li {
-									
-									&:hover,
-									a:hover,
-									a:active {
-										ul {
-											margin:{
-												left	:	100%;
-											}
-										}
-									}
-								}
+						ul {
+							margin:{
+								left	:	100%;
 							}
 						}
+						//&:hover,
+						//a:hover,
+						//a:active {
+						//	ul {
+						//		
+						//		margin:{
+						//			left	:	100%;
+						//		}
+						//		
+						//		li {
+						//			
+						//			&:hover,
+						//			a:hover,
+						//			a:active {
+						//				ul {
+						//					margin:{
+						//						left	:	100%;
+						//					}
+						//				}
+						//			}
+						//		}
+						//	}
+						//}
 					}
 				}
 			}
@@ -306,30 +355,34 @@
 					margin-right	:	$col_blank;
 					
 					li {
-						
-						&:hover,
-						a:hover,
-						a:active {
-							ul {
-								
-								margin:{
-									right	:	100%;
-								}
-								
-								li {
-									
-									&:hover,
-									a:hover,
-									a:active {
-										ul {
-											margin:{
-												right	:	100%;
-											}
-										}
-									}
-								}
+						ul {
+							margin:{
+								right	:	100%;
 							}
 						}
+						//&:hover,
+						//a:hover,
+						//a:active {
+						//	ul {
+						//		
+						//		margin:{
+						//			right	:	100%;
+						//		}
+						//		
+						//		li {
+						//			
+						//			&:hover,
+						//			a:hover,
+						//			a:active {
+						//				ul {
+						//					margin:{
+						//						right	:	100%;
+						//					}
+						//				}
+						//			}
+						//		}
+						//	}
+						//}
 					}
 				}
 			}
