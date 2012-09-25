@@ -38,7 +38,7 @@ tags : [scss, ruby]
 しかし無残にもエラーorz
 
 	Sass::SyntaxError: An @include loop has been found: ul-loop includes itself
-	  handle_include_loop! at /home/tomita/applications/nex3-sass-527e2f4/lib/sass/tree/visitors/perform.rb:424
+	  handle_include_loop! at sass/lib/sass/tree/visitors/perform.rb:424
 
 
 perform.rbのSass::Tree::Visitors::Perform#handle_include_loop!(sass3.2.1)を↓のようにしちゃえば再帰もできるんですが...
