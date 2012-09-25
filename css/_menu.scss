@@ -69,7 +69,8 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 			a:active {
 				
 				ul{
-					visibility	:	visible;
+					//visibility	:	visible;
+					display		:	block;
 					bottom		:	100%;
 					
 					li{
@@ -85,7 +86,8 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 						}
 						
 						ul {
-							visibility	:	hidden;
+							//visibility	:	hidden;
+							display		:	none;
 						}
 						
 						&:hover a,
@@ -103,12 +105,14 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 						a:active {
 							
 							ul {
-								visibility	:	visible;
+								//visibility	:	visible;
+								display		:	block;
 								bottom		:	0;
 								
 								li {
 									ul {
-										visibility	:	hidden;
+										//visibility	:	hidden;
+										display		:	none;
 									}
 									
 									&:hover a,
@@ -121,7 +125,8 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 									a:hover,
 									a:active {
 										ul {
-											visibility	:	visible;
+											//visibility	:	visible;
+											display		:	block;
 											bottom		:	0;
 											
 											li {
@@ -157,7 +162,8 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 			}
 			
 			ul {
-				visibility	:	hidden;
+				//visibility	:	hidden;
+				display		:	none;
 				position	:	absolute
 			}
 			
@@ -192,7 +198,8 @@ Syntax recommendation http://sass-lang.com/docs/yardoc/file.SASS_REFERENCE.html
 	//}
 	
 	a:active + ul {
-		visibility	:	visible;
+		//visibility	:	visible;
+		display		:	block;
 		bottom		:	0;
 		//left		:	0;
 	}
