@@ -7,9 +7,9 @@ tags : [scss, ruby]
 ---
 最近SCSSが便利なこと知って、CSSを書くときはもっぱらSCSSを使ってます。
 
-で、このサイトのCSSもSCSS使って書いてるのですが、メニューの段組構成をmixinの再起で書けないかなぁと書いてみたんですが...
+で、このサイトのCSSもSCSS使って書いてるのですが、メニューの段組構成をmixinの再帰で書けないかなぁと書いてみたんですが...
 
-<pre><code>
+<pre>
 @mixin ul-loop($i : 2){
 	@if 0 < $i {
 		ul {
@@ -32,7 +32,7 @@ tags : [scss, ruby]
 }
 
 @include ul-loop(4);
-</code></pre>
+</pre>
 
 
 しかし無残にもエラーorz
@@ -41,7 +41,7 @@ tags : [scss, ruby]
 	  handle_include_loop! at /home/tomita/applications/nex3-sass-527e2f4/lib/sass/tree/visitors/perform.rb:424
 
 
-perform.rbのSass::Tree::Visitors::Perform#handle_include_loop!(sass3.2.1)を↓のようにしちゃえば再起もできるんですが...
+perform.rbのSass::Tree::Visitors::Perform#handle_include_loop!(sass3.2.1)を↓のようにしちゃえば再帰もできるんですが...
 
 <pre><code>
 def handle_include_loop!(node)
@@ -71,4 +71,4 @@ end
 </code></pre>
 
 
-再起便利なんだけどなぁ...
+再帰便利なんだけどなぁ...
