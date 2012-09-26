@@ -33,13 +33,13 @@ tags : [scss, ruby]
 	@include ul-loop(4);
 
 
-しかし無残にもエラーorz
+無残にもエラーorz
 
 	Sass::SyntaxError: An @include loop has been found: ul-loop includes itself
 	  handle_include_loop! at sass/lib/sass/tree/visitors/perform.rb:424
 
 
-perform.rbのSass::Tree::Visitors::Perform#handle_include_loop!(sass3.2.1)を↓のようにしちゃえば再帰もできるんですが...
+perform.rbのSass::Tree::Visitors::Perform#handle_include_loop!(sass3.2.1)を↓のようにしちゃえば再帰もできるんだけどなぁ...
 
 	def handle_include_loop!(node)
 	  msg = "An @include loop has been found:"
@@ -67,4 +67,3 @@ perform.rbのSass::Tree::Visitors::Perform#handle_include_loop!(sass3.2.1)を↓
 	end
 
 
-再帰便利なんだけどなぁ...

@@ -10,7 +10,7 @@ tags : [scss, ruby]
 で、このサイトのCSSもSCSS使って書いてるのですが、メニューの段組構成をmixinの再帰で書けないかなぁと書いてみたんですが...
 
 
-<pre>
+<pre name="code" class="css">
 
 @mixin ul-loop($i : 2){
 	@if 0 < $i {
