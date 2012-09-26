@@ -10,32 +10,32 @@ tags : [scss, ruby]
 で、このサイトのCSSもSCSS使って書いてるのですが、メニューの段組構成をmixinの再帰で書けないかなぁと書いてみたんですが...
 
 
-<pre name="code" class="css">
+<div name="code" class="css">
 
-@mixin ul-loop($i : 2){
-	@if 0 < $i {
-		ul {
-			visibility	:	visible;
+	@mixin ul-loop($i : 2){
+		@if 0 < $i {
+			ul {
+				visibility	:	visible;
 
-			li {
-				ul {
-					visibility	:	hidden;
-				}
+				li {
+					ul {
+						visibility	:	hidden;
+					}
 
-				&:hover,
-				&.current,
-				a:hover,
-				a:active {
-					@include ul-loop($i - 1);
+					&:hover,
+					&.current,
+					a:hover,
+					a:active {
+						@include ul-loop($i - 1);
+					}
 				}
 			}
 		}
 	}
-}
 
-@include ul-loop(4);
+	@include ul-loop(4);
 
-</pre>
+</div>
 
 
 しかし無残にもエラーorz
