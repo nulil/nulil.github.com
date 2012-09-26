@@ -9,7 +9,7 @@ tags : [scss, ruby]
 
 で、このサイトのCSSもSCSS使って書いてるのですが、メニューの段組構成をmixinの再帰で書けないかなぁと書いてみたんですが...
 
-
+```css
 	@mixin ul-loop($i : 2){
 		@if 0 < $i {
 			ul {
@@ -32,13 +32,13 @@ tags : [scss, ruby]
 	}
 
 	@include ul-loop(4);
-
+```
 
 
 しかし無残にもエラーorz
 
-	Sass::SyntaxError: An @include loop has been found: ul-loop includes itself
-	  handle_include_loop! at sass/lib/sass/tree/visitors/perform.rb:424
+> Sass::SyntaxError: An @include loop has been found: ul-loop includes itself
+>   handle_include_loop! at sass/lib/sass/tree/visitors/perform.rb:424
 
 
 perform.rbのSass::Tree::Visitors::Perform#handle_include_loop!(sass3.2.1)を↓のようにしちゃえば再帰もできるんですが...
