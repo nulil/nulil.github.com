@@ -79,4 +79,4 @@ nav.index-main-nav > div a:hover img, nav.index-main-nav > div a img:hover { bac
 
 .menu .amazon > iframe { -moz-border-top-left-radius: 1em; -webkit-border-top-left-radius: 1em; -o-border-top-left-radius: 1em; -ms-border-top-left-radius: 1em; -khtml-border-top-left-radius: 1em; border-top-left-radius: 1em; -moz-border-top-right-radius: 1em; -webkit-border-top-right-radius: 1em; -o-border-top-right-radius: 1em; -ms-border-top-right-radius: 1em; -khtml-border-top-right-radius: 1em; border-top-right-radius: 1em; }
 
-pre code { background: #eaf4fc; color: black; -moz-border-radius: 1em; -webkit-border-radius: 1em; -o-border-radius: 1em; -ms-border-radius: 1em; -khtml-border-radius: 1em; border-radius: 1em; }
+pre { background: #eaf4fc; color: black; -moz-border-radius: 1em; -webkit-border-radius: 1em; -o-border-radius: 1em; -ms-border-radius: 1em; -khtml-border-radius: 1em; border-radius: 1em; }

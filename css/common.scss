@@ -189,10 +189,8 @@ nav.index-main-nav {
 
 
 pre {
-	code {
-		background: $MAIN_COLOR;
-		color: black;
-		
-		@include rounded("", 1em);
-	}
+	background: $MAIN_COLOR;
+	color: black;
+
+	@include rounded("", 1em);
 }
