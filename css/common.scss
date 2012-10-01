@@ -191,6 +191,7 @@ nav.index-main-nav {
 pre {
 	background: $MAIN_COLOR;
 	color: black;
+	padding: 1em;
 
 	@include rounded("", 1em);
 }
