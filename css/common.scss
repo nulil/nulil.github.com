@@ -45,7 +45,7 @@ body{
 
 #content{
 	
-	.column {
+	&.column {
 		@include experimental(column-count, 2);
 		@include experimental(column-gap, 1.5em);
 		@include experimental(column-rule, 1px solid $MAIN-COLOR);
