@@ -10,22 +10,22 @@ tags : [scss, ruby]
 で、このサイトのCSSもSCSS使って書いてるのですが、メニューの段組構成をmixinの再帰で書けないかなぁと書いてみたんですが...
 
 	@mixin ul-loop($i : 2){
-		@if 0 < $i {
+	  @if 0 < $i {
+		ul {
+		  visibility  :  visible;
+		  li {
 			ul {
-				visibility	:	visible;
-				li {
-					ul {
-						visibility	:	hidden;
-					}
-					&:hover,
-					&.current,
-					a:hover,
-					a:active {
-						@include ul-loop($i - 1);
-					}
-				}
+			  visibility  :  hidden;
 			}
+			&:hover,
+			&.current,
+			a:hover,
+			a:active {
+			  @include ul-loop($i - 1);
+			}
+		  }
 		}
+	  }
 	}
 	@include ul-loop(4);
 
@@ -53,11 +53,11 @@ perform.rbのSass::Tree::Visitors::Perform#handle_include_loop!(sass3.2.1)を↓
 		end
 	  end
 	  return if mixins.empty?
-	  true						# true返しちゃう！	エラーは発生させない！
+	  true            # true返しちゃう！  エラーは発生させない！
 	#  raise Sass::SyntaxError.new("#{msg} #{node.name} includes itself") if mixins.size == 1
 	#
 	#  msg << "\n" << Sass::Util.enum_cons(mixins.reverse + [node.name], 2).map do |m1, m2|
-	#	"    #{m1} includes #{m2}"
+	#  "    #{m1} includes #{m2}"
 	#  end.join("\n")
 	#  raise Sass::SyntaxError.new(msg)
 	end
