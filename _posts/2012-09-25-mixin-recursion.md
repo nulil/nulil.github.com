@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "SCSS使ってるんだけど"
 date: 2012-09-25 22:42:00
 category : whatnot
