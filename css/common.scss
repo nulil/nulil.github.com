@@ -50,7 +50,7 @@ body{
 		@include experimental(column-gap, 1.5em);
 		@include experimental(column-rule, 1px solid $MAIN-COLOR);
 		
-		@media only screen and (max-device-width	: 480px){
+		@media only screen and (max-device-width	: 1480px){
 			@include experimental(column-count, 1);
 		}
 	}
