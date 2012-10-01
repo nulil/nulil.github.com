@@ -192,7 +192,7 @@ pre {
 	background: $MAIN_COLOR;
 	color: black;
 	padding: 1em;
-	overflow: scroll;
+	//overflow: scroll;
 
 	@include rounded("", 1em);
 }
