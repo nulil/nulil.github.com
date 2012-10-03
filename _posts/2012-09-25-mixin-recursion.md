@@ -11,25 +11,27 @@ tags : [scss, ruby]
 
 <!--more-->
 
-	@mixin ul-loop($i : 2){
-	  @if 0 < $i {
-	    ul {
-	      visibility  :  visible;
-	      li {
-	        ul {
-	          visibility  :  hidden;
-	        }
-	        &:hover,
-	        &.current,
-	        a:hover,
-	        a:active {
-	          @include ul-loop($i - 1);
-	        }
-	      }
-	    }
+{% highlight css linenos %}
+@mixin ul-loop($i : 2){
+  @if 0 < $i {
+	ul {
+	  visibility  :  visible;
+	  li {
+		ul {
+		  visibility  :  hidden;
+		}
+		&:hover,
+		&.current,
+		a:hover,
+		a:active {
+		  @include ul-loop($i - 1);
+		}
 	  }
 	}
-	@include ul-loop(4);
+  }
+}
+@include ul-loop(4);
+{% endhighlight %}
 
 
 無残にもエラーorz
@@ -40,28 +42,29 @@ tags : [scss, ruby]
 
 perform.rbのSass::Tree::Visitors::Perform#handle_include_loop!(sass3.2.1)を↓のようにしちゃえば再帰もできるんだけどなぁ...
 
-	def handle_include_loop!(node)
-	  msg = "An @include loop has been found:"
-	  content_count = 0
-	  mixins = @stack.reverse.map {|s| s[:name]}.compact.select do |s|
-	    if s == '@content'
-	      content_count += 1
-	      false
-	    elsif content_count > 0
-	      content_count -= 1
-	      false
-	    else
-	      true
-	    end
-	  end
-	  return if mixins.empty?
-	  true            # true返しちゃう！  エラーは発生させない！
-	#  raise Sass::SyntaxError.new("#{msg} #{node.name} includes itself") if mixins.size == 1
-	#
-	#  msg << "\n" << Sass::Util.enum_cons(mixins.reverse + [node.name], 2).map do |m1, m2|
-	#  "    #{m1} includes #{m2}"
-	#  end.join("\n")
-	#  raise Sass::SyntaxError.new(msg)
+{% highlight ruby linenos %}
+def handle_include_loop!(node)
+  msg = "An @include loop has been found:"
+  content_count = 0
+  mixins = @stack.reverse.map {|s| s[:name]}.compact.select do |s|
+	if s == '@content'
+	  content_count += 1
+	  false
+	elsif content_count > 0
+	  content_count -= 1
+	  false
+	else
+	  true
 	end
-
+  end
+  return if mixins.empty?
+  true            # true返しちゃう！  エラーは発生させない！
+#  raise Sass::SyntaxError.new("#{msg} #{node.name} includes itself") if mixins.size == 1
+#
+#  msg << "\n" << Sass::Util.enum_cons(mixins.reverse + [node.name], 2).map do |m1, m2|
+#  "    #{m1} includes #{m2}"
+#  end.join("\n")
+#  raise Sass::SyntaxError.new(msg)
+end
+{% endhighlight %}
 

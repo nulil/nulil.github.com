@@ -13,7 +13,9 @@ tags : [clojure, contrib, str-utils2, library]
 
 coll各要素の文字列表現をre-find関数でテストしている。
 
-	user=> (use '[clojure.contrib.str-utils2 :only (grep)])
-	nil
-	user=> (grep #"_+" ["abc" "def_" "_ghi" "jkl"])
-	("def_" "_ghi")
+{% highlight clojure linenos %}
+user=> (use '[clojure.contrib.str-utils2 :only (grep)])
+nil
+user=> (grep #"_+" ["abc" "def_" "_ghi" "jkl"])
+("def_" "_ghi")
+{% endhighlight %}

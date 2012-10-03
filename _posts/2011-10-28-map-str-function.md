@@ -11,7 +11,9 @@ collの各要素全てにfを適用し、結果を連結した文字列で返す
 
 <!--more-->
 
-	user=> (use '[clojure.contrib.str-utils2 :only (map-str)])
-	nil
-	user=> (map-str #(.toUpperCase %) ["abc" "def" "ghi"])
-	"ABCDEFGHI"
+{% highlight clojure linenos %}
+user=> (use '[clojure.contrib.str-utils2 :only (map-str)])
+nil
+user=> (map-str #(.toUpperCase %) ["abc" "def" "ghi"])
+"ABCDEFGHI"
+{% endhighlight %}

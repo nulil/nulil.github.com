@@ -12,8 +12,10 @@ sをn個くっつけた文字列を返す。
 
 <!--more-->
 
-	user=> (use '[clojure.contrib.str-utils2 :only (repeat)])
-	WARNING: repeat already refers to: #'clojure.core/repeat in namespace: user, being replaced by: #'clojure.contrib.str-utils2/repeat
-	nil
-	user=> (repeat "abc" 3)
-	"abcabcabc"
+{% highlight clojure linenos %}
+user=> (use '[clojure.contrib.str-utils2 :only (repeat)])
+WARNING: repeat already refers to: #'clojure.core/repeat in namespace: user, being replaced by: #'clojure.contrib.str-utils2/repeat
+nil
+user=> (repeat "abc" 3)
+"abcabcabc"
+{% endhighlight %}
