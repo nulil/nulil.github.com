@@ -7,6 +7,8 @@ tags : [clojure, contrib, str-utils2, library]
 ---
 clojure-contrib-str-utilsの関数は見終わったので、var.1.2から利用推奨のclojure-contrib-str-utils2のほうを見て行きたいと思います。
 
+<!--more-->
+
 - [blank?](/blog/clojure/2011/02/21/blank-function/)
 - [butlast](/blog/clojure/2011/03/23/butlast-function/)
 - [capitalize](/blog/clojure/2011/03/27/capitalize-function/)

@@ -5,7 +5,7 @@ date: 2011-11-13 12:00:00
 category : clojure
 tags : [clojure, contrib, str-utils2, library]
 ---
-使用方法: (repeat s n)
+使用方法: (repeat s n)  
 型ヒント: String s
 
 sをn個くっつけた文字列を返す。
