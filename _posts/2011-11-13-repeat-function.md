@@ -10,7 +10,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 sをn個くっつけた文字列を返す。
 
-<!-- more -->
+<!--more-->
 
 	user=> (use '[clojure.contrib.str-utils2 :only (repeat)])
 	WARNING: repeat already refers to: #'clojure.core/repeat in namespace: user, being replaced by: #'clojure.contrib.str-utils2/repeat

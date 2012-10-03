@@ -9,7 +9,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 正規表現によってcollの要素をフィルタリング。
 
-<!-- more -->
+<!--more-->
 
 coll各要素の文字列表現をre-find関数でテストしている。
 

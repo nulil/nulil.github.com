@@ -16,7 +16,7 @@ clojure.core/partialのように動作
 	(partial clojure.contrib.str-utils2/take 2)
 	;;=> (fn [s] (str-utils2/take s 2))
 
-<!-- more -->
+<!--more-->
 
 	user=> (use '[clojure.contrib.str-utils2 :only (partial)])
 	WARNING: partial already refers to: #'clojure.core/partial in namespace: user, being replaced by: #'

@@ -11,7 +11,7 @@ tags : [clojure, contrib, str-utils2, library]
 nが(count s)より大きい場合、空文字を返し
 小さい場合、sの末尾からn分削った文字列を返す。
 
-<!-- more -->
+<!--more-->
 
 	user=> (use 'clojure.contrib.str-utils2)
 	;clojure.coreの関数と名前が被るよって、いっぱいWARNINGでるけど無視で

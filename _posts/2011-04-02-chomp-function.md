@@ -11,7 +11,7 @@ tags : [clojure, contrib, str-utils2, library]
 sの末尾の全ての改行(\n)、または復帰(\r)を削除した文字列を返す。
 String.trim()と類似して高速動作
 
-<!-- more -->
+<!--more-->
 
 	user=> (use '[clojure.contrib.str-utils2 :only (chomp)])
 	nil

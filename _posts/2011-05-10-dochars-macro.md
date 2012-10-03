@@ -11,7 +11,7 @@ tags : [clojure, contrib, str-utils2, library]
 stringに指定された文字列の各charをnameに束縛してbodyを適用する。(だと思う)
 Unicodeの補助文字を処理しない。(単純に.charAtで1文字を取得)
 
-<!-- more -->
+<!--more-->
 
 bindingsにはベクターで指定。
 --name=bodyの中でchar(stringを分解した)を参照するための変数

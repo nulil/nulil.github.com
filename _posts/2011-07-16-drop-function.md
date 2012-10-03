@@ -11,7 +11,7 @@ tags : [clojure, contrib, str-utils2, library]
 sから最初のn文字を削除した文字列を返す。
 sの長さよりnが大きい場合は空文字を返す。
 
-<!-- more -->
+<!--more-->
 
 引数の順番がclojure.core/dropとは反対なことに注意。
 (str-utils2の指針にある”最初の引数は文字列”を守るため)

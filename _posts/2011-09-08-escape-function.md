@@ -11,7 +11,7 @@ tags : [clojure, contrib, str-utils2, library]
 s内の各charにcmap(関数またはマップ)を適用した文字列を返す。
 cmapがnilを返す場合は、元の文字がそのまま出力に追加される。
 
-<!-- more -->
+<!--more-->
 
 docharsマクロを使っているのでサロゲートコードには対応していない。
 

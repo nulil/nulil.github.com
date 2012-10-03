@@ -10,7 +10,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 s内のi+1番目の文字を取得する。
 
-<!-- more -->
+<!--more-->
 
 	user=> (use '[clojure.contrib.str-utils2 :only (get)])
 	WARNING: get already refers to: #'clojure.core/get in namespace: user, being replaced by: #'clojure.

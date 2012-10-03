@@ -10,7 +10,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 sの最後の文字を削除した文字列を返す。
 
-<!-- more -->
+<!--more-->
 
 	user=> (use '[clojure.contrib.str-utils2 :only (chop)])
 	nil

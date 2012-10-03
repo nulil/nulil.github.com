@@ -11,7 +11,7 @@ tags : [clojure, contrib, str-utils2, library]
 sequenceの要素全てをseparatorで繋げた文字列を返す。
 Perlの’join’のように動作する。
 
-<!-- more -->
+<!--more-->
 
 	user=> (use '[clojure.contrib.str-utils2 :only (join)])
 	nil

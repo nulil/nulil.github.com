@@ -10,7 +10,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 sの最初の文字を大文字にして、他は全て小文字にした文字列を返す。
 
-<!-- more -->
+<!--more-->
 
 	user=> (use 'clojure.contrib.str-utils2)
 	;clojure.coreの関数と名前が被るよって、いっぱいWARNINGでるけど無視で

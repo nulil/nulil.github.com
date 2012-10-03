@@ -9,7 +9,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 collの各要素全てにfを適用し、結果を連結した文字列で返す。
 
-<!-- more -->
+<!--more-->
 
 	user=> (use '[clojure.contrib.str-utils2 :only (map-str)])
 	nil

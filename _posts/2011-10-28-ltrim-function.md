@@ -10,7 +10,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 sの左側の空白を削除した文字列を返す。
 
-<!-- more -->
+<!--more-->
 
 	user=> (use '[clojure.contrib.str-utils2 :only (ltrim)])
 	nil

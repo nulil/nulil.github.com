@@ -10,7 +10,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 sを全て小文字に変換する。
 
-<!-- more -->
+<!--more-->
 
 	user=> (use '[clojure.contrib.str-utils2 :only (lower-case)])
 	nil

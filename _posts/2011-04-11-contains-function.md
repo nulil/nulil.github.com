@@ -10,7 +10,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 sにsubstringが含まれている場合、trueを返す。
 
-<!-- more -->
+<!--more-->
 
 	user=> (use '[clojure.contrib.str-utils2 :only (contains?)])
 	WARNING: contains? already refers to: #'clojure.core/contains? in namespace: user, being replaced by: #'clojure.contrib.str-utils2/contains?

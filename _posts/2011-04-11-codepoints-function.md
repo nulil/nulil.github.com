@@ -10,7 +10,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 sの各文字のUnicodeコードポイントを遅延シーケンスで返す。(だと思う)
 
-<!-- more -->
+<!--more-->
 
 sの各charが、上位サロゲートコード単位だったら(Character#isHighSurrogate==true) 、.codePointAt使って2char進め、Character#isHighSurrogate==falseならcharをintにして1char進めている。
 
