@@ -10,7 +10,7 @@ title: blog
 			{% if post.content contains '<!--~-->' %}
 			{{ post.content | split:~ | first }}~-->
 			{% else %}
-			{{ post.content }}
+			{{ post.content }}<!--nomore-->
 			{% endif %}
 		</div>
 	</li>
