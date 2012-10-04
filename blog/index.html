@@ -7,8 +7,8 @@ title: blog
 	<li>
 		<span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
 		<div>
-			{% if post.content contains '<!--~-->' %}
-			<!--onmore-->{{ post.content | split:~ | first }}~-->
+			{% if post.content contains '<!--more-->' %}
+			<!--onmore-->{{ post.content | split:<!--more--> | first }}
 			{% else %}
 			<!--nomore-->{{ post.content }}
 			{% endif %}
