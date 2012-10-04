@@ -8,9 +8,10 @@ title: blog
 		<span>{{ post.date | date: "%Y-%m-%d" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
 		<div>
 			{% if post.content contains '<!--more-->' %}
-			on
+			{{ post.content | split:'<!--more-->' | first }}
+			<a class="more" href="{{ post.url }}">&raquo;&raquo;</a>
 			{% else %}
-			no
+			{{ post.content }}
 			{% endif %}
 		</div>
 	</li>

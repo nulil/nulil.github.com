@@ -6,7 +6,7 @@ category : clojure
 tags : [clojure, contrib, str-utils2, library]
 ---
 使用方法: (dochars bindings & body)  
-バインディング => [name string]
+バインディング => \[name string\]
 
 stringに指定された文字列の各charをnameに束縛してbodyを適用する。(だと思う)  
 Unicodeの補助文字を処理しない。(単純に.charAtで1文字を取得)
@@ -29,5 +29,5 @@ nil
 {% endhighlight %}
 
 ~@はスプライシングアンクオートで、()で囲わない形で展開するらしいので
-(let [~(first bindings) (.charAt s# i#)] ~@body) は
-(let [name (.charAt s i)] body) といった感じに展開されるんだと思う。
+(let \[~(first bindings) (.charAt s# i#)\] ~@body) は
+(let \[name (.charAt s i)\] body) といった感じに展開されるんだと思う。

@@ -6,6 +6,6 @@ category : clojure
 tags : [clojure, contrib, str-utils2, library]
 ---
 使用方法: (docodepoints bindings & body)  
-バインディング => [name string]
+バインディング => \[name string\]
 
 Unicodeの補助文字を処理する形のdocharsマクロ

@@ -9,7 +9,7 @@ tags : [clojure, contrib, str-utils2, library]
 
 clojure.core/partialのように動作  
 第一引数は、第二引数以降を受け取る関数  
-(fn [s & more] (apply f s (concat args more))))に展開される。
+(fn \[s & more\] (apply f s (concat args more))))に展開される。
 
 例：
 {% highlight clojure linenos %}
