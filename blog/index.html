@@ -9,7 +9,6 @@ title: blog
 		<div>
 			{% if post.content contains '<!--more-->' %}
 			{{ post.content | split:<!--more--> | first }}
-			<a class="more" href="{{ post.url }}">&raquo;&raquo;</a>
 			{% else %}
 			{{ post.content }}
 			{% endif %}
