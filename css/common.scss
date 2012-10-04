@@ -15,7 +15,7 @@
 
 body{
 	background-color: $BASE-COLOR;
-	color: $MAIN-COLOR;
+	color: $ACCENT-COLOR;
 	font-weight: bolder;
 	margin: 0;
 	
@@ -25,6 +25,7 @@ body{
 		margin		:	0;
 		padding		:	0;
 		top			:	0;
+		color		:	$MAIN-COLOR;
 		
 		> h1{
 			margin		: 0;
