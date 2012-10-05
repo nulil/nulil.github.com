@@ -1,0 +1,392 @@
+
+.menu { 
+	$BASE_COLOR:	$BASE_COLOR !default;
+	$ACCENT_COLOR:	$ACCENT_COLOR !default;
+	$MAIN_COLOR:	$MAIN_COLOR !default;
+	
+	$hover_lighten:	50%;
+	
+	$row_blank: 0.25em;
+	$col_blank: 0.25em;
+	
+	$z_index: 2147483647;
+	ul	{
+		z-index	:	$z_index - 3;
+		ul {
+			z-index	:	$z_index - 2;
+			ul{
+				z-index	:	$z_index - 1;
+				ul{
+					z-index	:	$z_index - 0;
+				}
+			}
+		}
+	}
+	
+	position	:	fixed;
+	bottom		:	0;
+	
+//	// mixinの再起はできないっぽい
+//	// perfrom.rb のhandle_include_loop!のエラー投げてるところで(423行目あたり)、true返すようにすれば、とりあえず再起もできるようになる
+//	@mixin ul-loop($i){
+//		@if 0 < $i {  
+//			ul {
+//				//visibility	:	visible;
+//				display		:	block;
+//				
+//				li {
+//					ul {
+//						//visibility	:	hidden;
+//						display		:	none;
+//					}
+//					
+//					&:hover a,
+//					&.current a,
+//					a:hover,
+//					a:active	{
+//						//background-color:	#e9e9c7;
+//						//color	:	darken($ACCENT_COLOR, $hover_lighten);
+//						color	:	lighten($ACCENT_COLOR, $hover_lighten);
+//						
+//					}
+//					
+//					&:hover,
+//					&.current,
+//					a:hover,
+//					a:active {
+//						@include ul-loop($i - 1);
+//					}
+//					
+//					a {
+//						color	:	$ACCENT_COLOR;
+//					}
+//				}
+//			}
+//		}
+//	}
+//	@include ul-loop(4);
+	
+	
+	// 大まかな段組構造		mixinの再起でやりたい(ﾉд')
+	ul {
+		//visibility	:	visible;
+		display		:	block;
+		
+		li {
+			ul {
+				//visibility	:	hidden;
+				display		:	none;
+			}
+			
+			&:hover a,
+			&.current a,
+			a:hover,
+			a:active	{
+				//background-color:	#e9e9c7;
+				//color	:	darken($ACCENT_COLOR, $hover_lighten);
+				color	:	lighten($ACCENT_COLOR, $hover_lighten);
+				
+			}
+			
+			&:hover,
+			&.current,
+			a:hover,
+			a:active {
+				ul {
+					//visibility	:	visible;
+					display		:	block;
+					
+					li {
+						ul {
+							//visibility	:	hidden;
+							display		:	none;
+						}
+						
+						&:hover a,
+						&.current a,
+						a:hover,
+						a:active	{
+							//background-color:	#e9e9c7;
+							//color	:	darken($ACCENT_COLOR, $hover_lighten);
+							color	:	lighten($ACCENT_COLOR, $hover_lighten);
+							
+						}
+						
+						&:hover,
+						&.current,
+						a:hover,
+						a:active {
+							ul {
+								//visibility	:	visible;
+								display		:	block;
+								
+								li {
+									ul {
+										//visibility	:	hidden;
+										display		:	none;
+									}
+									
+									&:hover a,
+									&.current a,
+									a:hover,
+									a:active	{
+										//background-color:	#e9e9c7;
+										//color	:	darken($ACCENT_COLOR, $hover_lighten);
+										color	:	lighten($ACCENT_COLOR, $hover_lighten);
+										
+									}
+									
+									&:hover,
+									&.current,
+									a:hover,
+									a:active {
+										ul {
+											//visibility	:	visible;
+											display		:	block;
+											
+											li {
+												ul {
+													//visibility	:	hidden;
+													display		:	none;
+												}
+												
+												&:hover a,
+												&.current a,
+												a:hover,
+												a:active	{
+													//background-color:	#e9e9c7;
+													//color	:	darken($ACCENT_COLOR, $hover_lighten);
+													color	:	lighten($ACCENT_COLOR, $hover_lighten);
+													
+												}
+												
+												a {
+													color	:	$ACCENT_COLOR;
+												}
+											}
+										}
+									}
+									
+									a {
+										color	:	$ACCENT_COLOR;
+									}
+								}
+							}
+						}
+						
+						a {
+							color	:	$ACCENT_COLOR;
+						}
+					}
+				}
+			}
+			
+			a {
+				color	:	$ACCENT_COLOR;
+			}
+		}
+	}
+	
+	
+	// 細かな設定
+	ul {
+		padding	:	0;
+		margin	:	0;
+		list-style-type	:	none;
+		
+		li {
+			position	:	relative;
+			
+			img {
+				height	:	2em;
+			}
+			&:hover,
+			&.current,
+			a:hover,
+			a:active {
+				ul{
+					bottom		:	100%;
+					
+					li {
+						&:hover,
+						a:hover,
+						a:active {
+							
+							ul {
+								bottom		:	0;
+							}
+						}
+					}
+				}
+				
+			}
+			
+			ul {
+				position	:	absolute
+			}
+			
+			li {
+				padding	:	2px;
+			}
+			
+			a{
+				padding			:	$row_blank $col_blank;
+				//background-color:	#c9c9a7;
+				text:	{
+					decoration	:	none;
+				}
+			}
+		}
+	}
+	
+	table {
+		border-collapse	:	collapse;
+		margin			:	0;
+		padding			:	0;
+		margin			:	-1px;
+	}
+	
+	//> ul > li > a {
+	//	text-align	:	left;
+	//	width		:	4em;
+	//	padding		:	0.25em 1em
+	//}
+	
+	a:active + ul {
+		//visibility	:	visible;
+		display		:	block;
+		bottom		:	0;
+	}
+	
+	a {
+		color		:	$ACCENT_COLOR;
+		display			:	block;
+		//width			:	100%;
+	}
+	
+	&.top {
+		top		:	10%;
+		
+		li:hover,
+		li.current,
+		a:hover,
+		a:active {
+			
+			ul {
+				top	:	100%;
+				
+				li:hover,
+				a:hover,
+				a:active {
+					
+					ul {
+						top	:	0;
+					}
+				}
+			}
+		}
+	}
+	
+	&.left {
+		left	:	0;
+		
+		li {
+			&:hover,
+			&.current,
+			a:hover,
+			a:active {
+				
+				ul{
+					left		:	0;
+					margin-left	:	$col_blank;
+					
+					li {
+						ul {
+							margin:{
+								left	:	100%;
+							}
+						}
+						//&:hover,
+						//a:hover,
+						//a:active {
+						//	ul {
+						//		
+						//		margin:{
+						//			left	:	100%;
+						//		}
+						//		
+						//		li {
+						//			
+						//			&:hover,
+						//			a:hover,
+						//			a:active {
+						//				ul {
+						//					margin:{
+						//						left	:	100%;
+						//					}
+						//				}
+						//			}
+						//		}
+						//	}
+						//}
+					}
+				}
+			}
+			
+		}
+	}
+	
+	&.right,
+	&:not(.left) {
+		right	:	0;
+		
+		> ul {
+			margin-right	:	0.75em;
+		}
+		
+		li {
+			&:hover,
+			&.current,
+			a:hover,
+			a:active {
+				
+				ul{
+					right			:	0;
+					margin-right	:	$col_blank;
+					
+					li {
+						ul {
+							margin:{
+								right	:	100%;
+							}
+						}
+						//&:hover,
+						//a:hover,
+						//a:active {
+						//	ul {
+						//		
+						//		margin:{
+						//			right	:	100%;
+						//		}
+						//		
+						//		li {
+						//			
+						//			&:hover,
+						//			a:hover,
+						//			a:active {
+						//				ul {
+						//					margin:{
+						//						right	:	100%;
+						//					}
+						//				}
+						//			}
+						//		}
+						//	}
+						//}
+					}
+				}
+			}
+		}
+	}
+	
+}

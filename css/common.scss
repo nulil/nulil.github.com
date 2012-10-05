@@ -1,0 +1,199 @@
+/*
+*/
+
+@import "mixins";
+@import "common-config";
+@import "menu";
+
+
+.copyright {
+	font-size:	0.6em;
+	position:	fixed;
+	bottom:	0;
+	right:	10px;
+}
+
+body{
+	background-color: $BASE-COLOR;
+	color: $ACCENT-COLOR;
+	font-weight: bolder;
+	margin: 0;
+	
+	> header {
+		position	:	fixed;
+		width		:	100%;
+		margin		:	0;
+		padding		:	0;
+		top			:	0;
+		color		:	$MAIN-COLOR;
+		
+		> h1{
+			margin		: 0;
+			padding		: 0.5em;
+			right		: 0;
+			position	: relative;
+			font-size	: 4em;
+			text-align	: right;
+		}
+	}
+	
+	> article {
+		margin	:	8em;
+	}
+}
+
+
+
+#content{
+	
+	&.column {
+		@include experimental(column-count, 2);
+		@include experimental(column-gap, 1.5em);
+		@include experimental(column-rule, 1px solid $MAIN-COLOR);
+		
+		@media only screen and (max-device-width	: 1480px){
+			@include experimental(column-count, 1);
+		}
+	}
+}
+
+input[type="text"]:not([size]){
+	width	:	10em;
+}
+
+
+
+
+// menu調整
+.menu {
+	a {
+		font-size	:	1.5em;
+	}
+	
+	ul ul ul{
+		a {
+			font-size	:	1.2em;
+		}
+		
+		ul {
+			width	:	8em;
+		}
+	}
+	
+	li{
+		&.blog_tag,
+		&.search{
+			display	:	none;
+		}
+	}
+	
+	li{
+		&:first-child{
+			display	:	none;
+		}
+		&:last-child{
+			display	:	block;
+		}
+	}
+	&.top li{
+		&:first-child{
+			display	:	block;
+		}
+		&:last-child{
+			display	:	none;
+		}
+	}
+	
+	ul{
+		a{
+			@include rounded("", 1em);
+			text-align	:	center;
+		}
+		
+		li:hover a,
+		a:hover,
+		a:active{
+			@include background-rgba( $ACCENT_COLOR, 0.25 );
+		}
+		li:hover,
+		a:hover,
+		a:active{
+			a{
+				background	:	transparent;
+			}
+			li:hover a,
+			a:hover,
+			a:active{
+				@include background-rgba( $ACCENT_COLOR, 0.25 );
+			}
+			
+			li:hover,
+			a:hover,
+			a:active{
+				a{
+					background	:	transparent;
+				}
+				li:hover a,
+				a:hover,
+				a:active{
+					@include background-rgba( $ACCENT_COLOR, 0.25 );
+				}
+				li:hover,
+				a:hover,
+				a:active{
+					a{
+						background	:	transparent;
+					}
+					li:hover a,
+					a:hover,
+					a:active{
+						@include background-rgba( $ACCENT_COLOR, 0.25 );
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+nav.index-main-nav {
+	text-align: center;
+	width	:	100%;
+	
+	> div {
+		display	:	inline-block;
+		margin	:	0 auto;
+		padding	:	1em;
+		
+		img {
+			@include rounded("", 2em);
+		}
+		
+		a:hover img,
+		a img:hover {
+			@include background-rgba( $ACCENT_COLOR, 0.25 );
+		}
+	}
+}
+
+
+.menu {
+	.amazon {
+		> iframe {
+			@include rounded(top-left, 1em);
+			@include rounded(top-right, 1em);
+		}
+	}
+}
+
+
+pre {
+	background: $MAIN_COLOR;
+	color: black;
+	padding: 1em;
+	//overflow: scroll;
+
+	@include rounded("", 1em);
+}
