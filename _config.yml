@@ -29,8 +29,6 @@ author :
   feedburner : sleepycat
 
 
-paginate: 5
-blog_uri: /blog
 
 
 # The production_url is only used when full-domain names are needed
