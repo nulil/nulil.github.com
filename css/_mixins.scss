@@ -1,0 +1,65 @@
+
+@import "experimental";
+
+//
+// 角丸
+//
+@mixin rounded($side: "", $radius: 10px){
+	@if $side == "" {
+		@include experimental(border-radius, $radius);
+		} @else {
+		@include experimental(border-#{$side}-radius, $radius);
+	}
+}
+
+@mixin clearfix {
+	zoom: 1;
+	&:before,
+	&:after {
+		display: block;
+		height: 0;
+		visibility: hidden;
+		content: "\0020";
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+
+@mixin background-rgba($rgb,$a,
+$moz      : $experimental-support-for-mozilla,
+$webkit   : $experimental-support-for-webkit,
+$o        : $experimental-support-for-opera,
+$ms       : $experimental-support-for-microsoft,
+$khtml    : $experimental-support-for-khtml,
+$official : true) {
+	// To mimic this in Internet Explorer, you can use the proprietary filter
+	// property to create a gradient with the same start and end color, along
+	// with an alpha transparency value.
+	
+	@if experimental-support-for-microsoft {
+		$color: ie_hex_str(rgba($rgb,$a));
+		//$value: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=##{$color},endColorstr=##{$color})");
+		$value: unquote("progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#{$color},endColorstr=#{$color})");
+		
+		//background-color: transparent\9;
+		background-color: transparent;
+		-ms-filter: $value;
+		filter: $value;
+		zoom: 1;
+	}
+	
+	// Good browsers.
+	//@include experimental(background-color, rgba($rgb,$a),$moz,$webkit,$o,false,$khtml,$official);
+	background-color	:	rgba($rgb,$a);
+}
+
+@mixin text3d($color) {
+	color: $color;
+	text-shadow: 1px 1px 0px darken($color, 5%),
+	2px 2px 0px darken($color, 10%),
+	3px 3px 0px darken($color, 15%),
+	4px 4px 0px darken($color, 20%),
+	4px 4px 2px darken($color, 50%);
+}
