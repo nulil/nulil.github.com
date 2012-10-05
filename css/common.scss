@@ -15,7 +15,7 @@
 
 body{
 	background-color: $BASE-COLOR;
-	color: $ACCENT-COLOR;
+	color: $MAIN-COLOR;
 	font-weight: bolder;
 	margin: 0;
 	
@@ -25,7 +25,6 @@ body{
 		margin		:	0;
 		padding		:	0;
 		top			:	0;
-		color		:	$MAIN-COLOR;
 		
 		> h1{
 			margin		: 0;
@@ -38,7 +37,7 @@ body{
 	}
 	
 	> article {
-		margin	:	8em;
+		margin	:	7em;
 	}
 }
 
@@ -46,12 +45,12 @@ body{
 
 #content{
 	
-	&.column {
+	.column {
 		@include experimental(column-count, 2);
 		@include experimental(column-gap, 1.5em);
 		@include experimental(column-rule, 1px solid $MAIN-COLOR);
 		
-		@media only screen and (max-device-width	: 1480px){
+		@media only screen and (max-device-width	: 480px){
 			@include experimental(column-count, 1);
 		}
 	}
@@ -190,10 +189,10 @@ nav.index-main-nav {
 
 
 pre {
-	background: $MAIN_COLOR;
-	color: black;
-	padding: 1em;
-	//overflow: scroll;
-
-	@include rounded("", 1em);
+	code {
+		background: $MAIN_COLOR;
+		color: black;
+		
+		@include rounded("", 1em);
+	}
 }
