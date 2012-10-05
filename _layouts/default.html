@@ -11,7 +11,7 @@
 
 		<title>{% if page.title %}{{ page.title }} </ {% endif %}{{ site.title }}</title>
 
-		<meta property="og:title" content="{% if page.title %}{{ page.title }} </ {% endif %}{{ site.title }}" />
+		<meta property="og:title" content="{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}" />
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="{% if page.url %}{{ page.url }}{% endif %}{{ site.url }}" />
 		<meta property="og:image" content="{% if page.img %}{{ page.img }}{% endif %}" />
