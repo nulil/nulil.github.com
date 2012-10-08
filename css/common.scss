@@ -25,15 +25,15 @@ body{
 		margin		:	0;
 		padding		:	0;
 		top			:	0;
-		color		:	$MAIN-COLOR;
 		
-		> h1{
+		> h1 {
 			margin		: 0;
 			padding		: 0.5em;
 			right		: 0;
 			position	: relative;
 			font-size	: 4em;
 			text-align	: right;
+			color		:	$MAIN-COLOR;
 		}
 	}
 	
