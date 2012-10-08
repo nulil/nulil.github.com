@@ -23,3 +23,4 @@ user=> (escape "abc" #(str "3" %))
 user=> (escape "abc" {\a "e" \b "d" })
 "edc"
 {% endhighlight %}
+

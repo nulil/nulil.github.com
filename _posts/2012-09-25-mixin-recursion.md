@@ -67,4 +67,3 @@ def handle_include_loop!(node)
 #  raise Sass::SyntaxError.new(msg)
 end
 {% endhighlight %}
-

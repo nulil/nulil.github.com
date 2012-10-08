@@ -18,3 +18,4 @@ nil
 user=> (ltrim "   abc   ")
 "abc   "
 {% endhighlight %}
+

@@ -18,3 +18,4 @@ nil
 user=> (lower-case "AbC")
 "abc"
 {% endhighlight %}
+

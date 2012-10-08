@@ -36,3 +36,4 @@ user=> (map (partial concat "a") ["1" "2" "3"])
 user=> ( (partial concat "a") ["1" "2" "3"])
 ("1" "2" "3" \a)
 {% endhighlight %}
+

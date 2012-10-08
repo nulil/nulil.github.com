@@ -24,3 +24,4 @@ user=> (get "abc" 0)
 user=> (get "abc" 4)
 java.lang.StringIndexOutOfBoundsException: String index out of range: 4 (NO_SOURCE_FILE:0)
 {% endhighlight %}
+

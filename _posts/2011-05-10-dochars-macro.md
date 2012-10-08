@@ -31,3 +31,4 @@ nil
 ~@はスプライシングアンクオートで、()で囲わない形で展開するらしいので
 (let \[~(first bindings) (.charAt s# i#)\] ~@body) は
 (let \[name (.charAt s i)\] body) といった感じに展開されるんだと思う。
+

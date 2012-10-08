@@ -9,3 +9,4 @@ tags : [clojure, contrib, str-utils2, library]
 バインディング => \[name string\]
 
 Unicodeの補助文字を処理する形のdocharsマクロ
+

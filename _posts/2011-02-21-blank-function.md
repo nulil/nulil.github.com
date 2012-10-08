@@ -8,3 +8,4 @@ tags : [clojure, contrib, str-utils2, library]
 使用方法: (blank? s)
 
 sが空、nilの場合、または空白のみの場合、trueを返す。
+

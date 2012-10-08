@@ -20,3 +20,4 @@ user=> (chop "abc\n")
 user=> (chop "abcd")
 "abc"
 {% endhighlight %}
+

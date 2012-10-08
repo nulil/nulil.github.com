@@ -27,3 +27,4 @@ user=> (chomp "abc\ndef\n")
 user=> (chomp "abc\n\n\n\n\n\r\r\n\r\n")
 "abc"
 {% endhighlight %}
+

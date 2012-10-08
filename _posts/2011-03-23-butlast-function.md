@@ -21,3 +21,4 @@ user=> (butlast "abc" 4)
 user=> (butlast "abcdef" 4)
 "ab"
 {% endhighlight %}
+

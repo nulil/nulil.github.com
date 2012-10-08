@@ -23,3 +23,4 @@ nil
 user=> (drop "abc" 2)
 "c"
 {% endhighlight %}
+

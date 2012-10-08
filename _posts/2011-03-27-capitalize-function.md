@@ -19,3 +19,4 @@ nil
 user=> (capitalize "aBC")
 "Abc"
 {% endhighlight %}
+
