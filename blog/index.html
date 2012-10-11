@@ -9,6 +9,7 @@ title: blog
 		<div>
 			{% if post.content contains '<!--more-->' %}
 			{{ post.content | split:'<!--more-->' | first }}
+			<a class="more" href="{{ post.url }}">&raquo;&raquo;</a>
 			{% else %}
 			{{ post.content }}
 			{% endif %}
@@ -19,7 +20,7 @@ title: blog
 
 <aside id="main_pagenation" class="pager">
 	<ul>
-		{% if paginator.previous_page %}<li class="newer"><a href="{{ site.blog_uri }}/{% if paginator.previous_page != 1 %}page{{ paginator.previous_page }}{% endif %}">&larr;&nbsp;Newer Entries</a></li>{% endif %}
-		{% if paginator.next_page %}<li class="older"><a href="{{ site.blog_uri }}/page{{ paginator.next_page }}">Older Entries&nbsp;&rarr;</a></li>{% endif %}
+		{% if paginator.previous_page %}<li class="newer"><a href="{{ site.blog_uri }}/{% if paginator.previous_page != 1 %}page{{ paginator.previous_page }}{% endif %}">&laquo;&nbsp;newer</a></li>{% endif %}
+		{% if paginator.next_page %}<li class="older"><a href="{{ site.blog_uri }}/page{{ paginator.next_page }}">older&nbsp;&raquo;</a></li>{% endif %}
 	</ul>
 </aside>
