@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Syntax highlighting Test"
 date: 2012-09-26 12:42:00
 category : whatnot
