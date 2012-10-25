@@ -1,36 +1,9 @@
 ---
-layout: default
-title: "Syntax highlighting Test"
+layout: post
+title: "PHP template engine?"
 date: 2012-09-26 12:42:00
 category : whatnot
-tags: [ruby]
+tags: [php,template engine]
 ---
-
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
-```
-
-<!--more-->
-
-[github flavored markdown](http://github.github.com/github-flavored-markdown/)の"Syntax highlighting"のものをコピペしてもダメなのか...
-
-
-
-9/27追記
-
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
-
-
-{% highlight ruby linenos %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
-
-Liquidの書き方なら大丈夫なのね。
+PHPのヒアドキュメントの変数展開を利用したテンプレートエンジンみたいなのを思いついたので、後で作ってみよっと。
+恐らく数十行だと思うけどｗ
