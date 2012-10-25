@@ -37,7 +37,7 @@ body{
 		}
 	}
 	
-	> article {
+	> section {
 		margin	:	8em;
 	}
 }
@@ -46,7 +46,7 @@ body{
 
 #content{
 	
-	&.column {
+	> article.column {
 		@include experimental(column-count, 2);
 		@include experimental(column-gap, 1.5em);
 		@include experimental(column-rule, 1px solid $MAIN-COLOR);
