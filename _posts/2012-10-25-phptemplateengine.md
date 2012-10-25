@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "PHP template engine?"
-date: 2012-09-26 12:42:00
+date: 2012-10-25 12:00:00
 category : whatnot
 tags: [php,template engine]
 ---
