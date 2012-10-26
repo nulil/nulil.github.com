@@ -19,6 +19,7 @@ PHPでヒアドキュメント内で関数を使う方法を試したら、思�
 ヒアドキュメント内で関数を使う方法ってのは
 
 {% highlight php linenos %}
+<?php
 $echo = create_function('$val', 'return $val;');
 $foo = 'foo';
 echo <<<EOD
@@ -37,6 +38,7 @@ EOD;
 PHP5.3以上ならcreate_functionじゃなくても大丈夫
 
 {% highlight php linenos %}
+<?php
 $echo = function($val){ return $val; };
 $foo = 'foo';
 echo <<<EOD
