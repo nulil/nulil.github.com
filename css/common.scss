@@ -44,18 +44,18 @@ body{
 
 
 
-#content{
-	
-	> article.column {
-		@include experimental(column-count, 2);
-		@include experimental(column-gap, 1.5em);
-		@include experimental(column-rule, 1px solid $MAIN-COLOR);
-		
-		@media only screen and (max-device-width	: 600px){
-			@include experimental(column-count, 1);
-		}
-	}
-}
+//#content{
+//	
+//	> article.column {
+//		@include experimental(column-count, 2);
+//		@include experimental(column-gap, 1.5em);
+//		@include experimental(column-rule, 1px solid $MAIN-COLOR);
+//		
+//		@media only screen and (max-device-width	: 600px){
+//			@include experimental(column-count, 1);
+//		}
+//	}
+//}
 
 input[type="text"]:not([size]){
 	width	:	10em;
