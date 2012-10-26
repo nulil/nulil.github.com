@@ -6,11 +6,11 @@ category : php
 tags: [php,template engine]
 ---
 PHPでヒアドキュメント内で関数を使う方法を試したら、思ったとおりに動いた。  
-そして、それを利用したら簡単なテンプレートエンジンが出来そうな気がしたので作ってみた。
+そして、それを利用したら簡単なテンプレートエンジンみたいなのが出来そうな気がしたので作ってみた。
 
 <!--more-->
 
-ソースコードはリポジトリ見てください。  
+テンプレートエンジンみたいなやつのソースコードはリポジトリ見てください。  
 [PHPStringTemplateEngine](https://github.com/nulil/PHPStringTemplateEngine)
 
 <br />
