@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "SCSS入門"
+title: "なんでSCSS？"
 date: 2012-10-28 12:00:00
 category : scss
 tags: [scss,sass]
 ---
-SCSS入門書いて見ましたが、なんでSCSSにしたのか。  
+SCSS入門書いて見ましたが、なんでSCSSにしたのかもちょっとまとめてみました。
 
 
 <!--more-->
