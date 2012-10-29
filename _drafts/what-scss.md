@@ -50,6 +50,9 @@ LESSにもメリットはあって、一番大きいのは、less.jsによりブ
 Closure StylesheetsはCSSの最適化までやってくれるのでSCSSよりいい可能性も。  
 でもまだディファクトスタンダードはSCSSかLESSな感じなので。
 
+そんな感じで、機能面・開発環境の構築しやすさ・普及度合い(Web上の情報の多さ)をなんとなーくと感じて判断しましたｗ
+
+
 参考  
 [CSS拡張メタ言語「SCSS(Sass)」と「LESS」の比較](http://dxd8.com/archives/217/)  
 [LESSとSassの比較した結果LESSを採用することにした](http://yuku-tech.hatenablog.com/entry/20120304/1330851243)
