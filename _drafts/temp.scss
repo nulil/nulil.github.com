@@ -1,0 +1,50 @@
+$foo: foo;
+$BASE_COLOR: #111;
+$MAIN_COLOR: #16A;
+
+p {
+	@if $foo == foo {
+		color: red;
+	}
+	
+	@if 1+1 < 5 {
+		border: 1px solid;
+	}
+
+	@if $BASE_COLOR == #7FFFFF {
+		background: $MAIN_COLOR;
+	}@else if $BASE_COLOR minus #7FFFFF {
+		background: $BASE_COLOR - #050505;
+	}@else {
+		background: $BASE_COLOR + #050505;
+	}
+}
+
+$support_for_old_ie: true;
+
+@mixin inline_block {
+	display: inline-block;
+
+	@if $support_for_old_ie {
+		*display: inline;
+		*zoom: 1;
+	}
+}
+
+.inlineblock {
+	@include inline_block;	// mixin呼び出し
+}
+
+@mixin dashed_border($color, $width: 1px) {
+	border: {
+		color: $color;
+		width: $width;
+		style: dashed;
+	}
+}
+p {
+	@include dashed_border(red);
+}
+div {
+	@include dashed_border(blue, 0.2em);
+}
