@@ -26,7 +26,7 @@ SASSというものがベースになっていて、SASSよりCSSに近い記法
 * ミックスイン
 * セレクタの継承
 
-
+<br />
 ## SCSS以外のCSSメタ言語
 
 私の知っているところではLESS、Closure Stylesheets。  
@@ -38,7 +38,7 @@ SASSというものがベースになっていて、SASSよりCSSに近い記法
 [Closure Stylesheets](http://code.google.com/p/closure-stylesheets/)はGoogleが提供している。  
 Javaで実装されている。
 
-
+<br />
 ## SCSSにしたワケ
 
 LESSと比較してSCSSのいいところは
@@ -212,7 +212,7 @@ p {
 }
 ```
 
-数値には不等号が使えますが、colorではエラーとなります。  
+数値の比較には不等号が使えますが、colorではエラーとなります。  
 代わりに minus 等のメソッドを使います。
 
 <br />
@@ -264,8 +264,94 @@ div {
 ## セレクタの継承
 
 ``` css
-
+/* scss */
+// 継承元のセレクタ
+p {
+	&.foo {
+		font: {
+			size: 2em;
+			style: italic;
+		}
+	}
+}
+div{
+	@extend p.foo;		// 継承
+	
+	font-style: normal;
+	
+	.black {
+		color: black;
+	}
+}
 ```
+
+コンパイルすると↓になります。
+
+``` css
+/* css */
+p.foo, div {
+  font-size: 2em;
+  font-style: italic;
+}
+
+div {
+  font-style: normal;
+}
+div .black {
+  color: black;
+}
+```
+
+継承を使うと p.foo, div のように、複数セレクタのCSSを出力してくれます。
+
+<br />
+ミックスインで書くと...
+
+``` css
+/* scss */
+@mixin bar{
+	font: {
+		size: 2em;
+		style: italic;
+	}
+}
+
+p {
+	&.foo {
+		@include bar;	// mixin
+	}
+}
+div{
+	@include bar;		// mixin
+	
+	font-style: normal;
+	
+	.black {
+		color: black;
+	}
+}
+```
+
+``` css
+/* css */
+p.foo {
+  font-size: 2em;
+  font-style: italic;
+}
+
+div {
+  font-size: 2em;
+  font-style: italic;
+  font-style: normal;
+}
+div .black {
+  color: black;
+}
+```
+
+複数セレクタではなくなり、CSSが冗長なってしまいます。
+
+
 
 
 <br />
