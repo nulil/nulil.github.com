@@ -80,7 +80,7 @@ Closure StylesheetsはCSSの最適化までやってくれるのでSCSSよりい
 }
 ```
 
-{% highlight css %}
+``` css
 /* scss */
 #container {
 	div {
@@ -90,12 +90,12 @@ Closure StylesheetsはCSSの最適化までやってくれるのでSCSSよりい
 		margin-top: 20px;
 	}
 }
-{% endhighlight %}
+```
 
 
 ネストの中で & を使うと親要素を参照できます。
 
-{% highlight css %}
+``` css
 /* scss */
 #container {
 	div {
@@ -112,7 +112,7 @@ Closure StylesheetsはCSSの最適化までやってくれるのでSCSSよりい
 		}
 	}
 }
-{% endhighlight %}
+```
 
 
 ## 変数
@@ -126,7 +126,7 @@ Closure StylesheetsはCSSの最適化までやってくれるのでSCSSよりい
 [変数 (プログラミング)](http://ja.wikipedia.org/wiki/%E5%A4%89%E6%95%B0_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0))  
 [マジックナンバー (プログラム)](http://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%B8%E3%83%83%E3%82%AF%E3%83%8A%E3%83%B3%E3%83%90%E3%83%BC_(%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0))
 
-{% highlight css %}
+``` css
 /* css */
 #container {
 	color: #EEE;
@@ -136,9 +136,9 @@ Closure StylesheetsはCSSの最適化までやってくれるのでSCSSよりい
 	color: #111;
 	background-color: #16A;
 }
-{% endhighlight %}
+```
 
-{% highlight css %}
+``` css
 /* scss */
 $BASE_COLOR: #111;
 $ACCENT_COLOR: #EEE;
@@ -153,7 +153,7 @@ $MAIN_COLOR: #16A;
 		background-color: $MAIN_COLOR;
 	}
 }
-{% endhighlight %}
+```
 
 SCSSのほうが長くなってしまいますが、さらにコードが長くなったときの見やすさ、値の変更しやすさは変数を使ったほうが上でしょう。
 
@@ -162,24 +162,24 @@ SCSSのほうが長くなってしまいますが、さらにコードが長く�
 
 演算も可能です。
 
-{% highlight css %}
+``` css
 /* scss */
 #container{
 	width: 600px+200px;
 }
-{% endhighlight %}
+```
 
 
 変数を使うと尚良し。
 
-{% highlight css %}
+``` css
 /* scss */
 $main_column_width :600px;
 $side_column_width :200px;
 #container {
 	width:$main_column_width+$side_column_width;
 }
-{% endhighlight %}
+```
 
 色に対しての演算、文字列の結合等も可能です。
 
@@ -188,7 +188,7 @@ $side_column_width :200px;
 
 @ifを使って、出力を変えることができます。
 
-{% highlight css %}
+``` css
 $foo: foo;
 $BASE_COLOR: #111;
 $MAIN_COLOR: #16A;
@@ -210,7 +210,7 @@ p {
 		background: $BASE_COLOR + #050505;
 	}
 }
-{% endhighlight %}
+```
 
 数値には不等号が使えますが、colorではエラーとなります。  
 代わりに minus 等のメソッドを使います。
@@ -223,7 +223,7 @@ CSSフレームワークの代わりに、ミックスインを使ってフレ�
 
 @mixin で定義して、@include でミックスインを呼び出します。
 
-{% highlight css %}
+``` css
 /* scss */
 $support_for_old_ie: true;
 @mixin inline_block {
@@ -238,12 +238,12 @@ $support_for_old_ie: true;
 .inlineblock {
 	@include inline_block;	// mixin呼び出し
 }
-{% endhighlight %}
+```
 
 
 値を渡すことも可能。未指定時の値も設定できます。
 
-{% highlight css %}
+``` css
 /* scss */
 @mixin dashed_border($color, $width: 1px) {
 	border: {
@@ -258,14 +258,14 @@ p {
 div {
 	@include dashed_border(blue, 0.2em);
 }
-{% endhighlight %}
+```
 
 
 ## セレクタの継承
 
-{% highlight css %}
+``` css
 
-{% endhighlight %}
+```
 
 
 
