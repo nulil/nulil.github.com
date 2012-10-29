@@ -70,7 +70,7 @@ Closure StylesheetsはCSSの最適化までやってくれるのでSCSSよりい
 参考  
 [ネスティング](http://ja.wikipedia.org/wiki/%E3%83%8D%E3%82%B9%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0)
 
-{% highlight css %}
+``` css
 /* css */
 #container div {
 	margin-top: 10px;
@@ -78,7 +78,7 @@ Closure StylesheetsはCSSの最適化までやってくれるのでSCSSよりい
 #container p {
 	margin-top: 20px;
 }
-{% endhighlight %}
+```
 
 {% highlight css %}
 /* scss */
