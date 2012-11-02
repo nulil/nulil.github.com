@@ -65,7 +65,7 @@ input[type="text"]:not([size]){
 
 
 // menu調整
-.menu {
+.menu{
 	a {
 		font-size	:	1.5em;
 	}
@@ -77,13 +77,6 @@ input[type="text"]:not([size]){
 		
 		ul {
 			width	:	8em;
-		}
-	}
-	
-	li{
-		&.blog_tag,
-		&.search{
-			display	:	none;
 		}
 	}
 	
@@ -196,4 +189,16 @@ pre {
 	//overflow: scroll;
 
 	@include rounded("", 1em);
+}
+
+
+.search{
+	.gsc-webResult.gsc-result,
+	.gsc-imageResult{
+		background-color: inherit;
+		
+		&:hover{
+			background-color: inherit;
+		}
+	}
 }

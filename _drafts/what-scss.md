@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "なんでSCSS？"
+title: "SCSSにしたワケ"
 date: 2012-10-28 12:00:00
 category : scss
-tags: [scss,sass]
+tags: [scss,sass,less,clusure stylesheets]
 ---
-SCSS入門書いて見ましたが、なんでSCSSにしたのかもちょっとまとめてみました。
-
+SCSS入門を書こうかと思ったので、その前になんでSCSSにしたのかを。
 
 <!--more-->
 
@@ -55,7 +54,7 @@ Closure StylesheetsはCSSの最適化までやってくれるのでSCSSよりい
 
 参考  
 [CSS拡張メタ言語「SCSS(Sass)」と「LESS」の比較](http://dxd8.com/archives/217/)  
-[LESSとSassの比較した結果LESSを採用することにした](http://yuku-tech.hatenablog.com/entry/20120304/1330851243)
+[LESSとSassの比較した結果LESSを採用することにした](http://yuku-tech.hatenablog.com/entry/20120304/1330851243)  
 [LESS でなく SCSS（Sass）を選ぶ理由](http://stack3.com/web-design/scss-or-less-css.html)
 
 

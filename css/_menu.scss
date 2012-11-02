@@ -1,4 +1,4 @@
-
+/*aaa*/
 .menu { 
 	$BASE_COLOR:	$BASE_COLOR !default;
 	$ACCENT_COLOR:	$ACCENT_COLOR !default;
@@ -66,126 +66,161 @@
 //	}
 //	@include ul-loop(4);
 	
-	
-	// 大まかな段組構造		mixinの再起でやりたい(ﾉд')
-	ul {
-		//visibility	:	visible;
-		display		:	block;
-		
-		li {
-			ul {
-				//visibility	:	hidden;
-				display		:	none;
-			}
-			
-			&:hover a,
-			&.current a,
-			a:hover,
-			a:active	{
-				//background-color:	#e9e9c7;
-				//color	:	darken($ACCENT_COLOR, $hover_lighten);
-				color	:	lighten($ACCENT_COLOR, $hover_lighten);
-				
-			}
-			
-			&:hover,
-			&.current,
-			a:hover,
-			a:active {
+	%menu_nest{
+		ul {
+			display: block;
+			li {
 				ul {
-					//visibility	:	visible;
-					display		:	block;
-					
-					li {
-						ul {
-							//visibility	:	hidden;
-							display		:	none;
-						}
-						
-						&:hover a,
-						&.current a,
-						a:hover,
-						a:active	{
-							//background-color:	#e9e9c7;
-							//color	:	darken($ACCENT_COLOR, $hover_lighten);
-							color	:	lighten($ACCENT_COLOR, $hover_lighten);
-							
-						}
-						
-						&:hover,
-						&.current,
-						a:hover,
-						a:active {
-							ul {
-								//visibility	:	visible;
-								display		:	block;
-								
-								li {
-									ul {
-										//visibility	:	hidden;
-										display		:	none;
-									}
-									
-									&:hover a,
-									&.current a,
-									a:hover,
-									a:active	{
-										//background-color:	#e9e9c7;
-										//color	:	darken($ACCENT_COLOR, $hover_lighten);
-										color	:	lighten($ACCENT_COLOR, $hover_lighten);
-										
-									}
-									
-									&:hover,
-									&.current,
-									a:hover,
-									a:active {
-										ul {
-											//visibility	:	visible;
-											display		:	block;
-											
-											li {
-												ul {
-													//visibility	:	hidden;
-													display		:	none;
-												}
-												
-												&:hover a,
-												&.current a,
-												a:hover,
-												a:active	{
-													//background-color:	#e9e9c7;
-													//color	:	darken($ACCENT_COLOR, $hover_lighten);
-													color	:	lighten($ACCENT_COLOR, $hover_lighten);
-													
-												}
-												
-												a {
-													color	:	$ACCENT_COLOR;
-												}
-											}
-										}
-									}
-									
-									a {
-										color	:	$ACCENT_COLOR;
-									}
-								}
-							}
-						}
-						
-						a {
-							color	:	$ACCENT_COLOR;
-						}
-					}
+					display: none;
 				}
-			}
-			
-			a {
-				color	:	$ACCENT_COLOR;
+				a {
+					color: $ACCENT_COLOR;
+				}
 			}
 		}
 	}
+	
+	@extend %menu_nest;
+	ul li{
+		&:hover a{
+			color: lighten($ACCENT_COLOR, $hover_lighten);
+		}	
+		&:hover{
+			@extend %menu_nest;
+			&:hover a{
+				color: lighten($ACCENT_COLOR, $hover_lighten);
+			}	
+			&:hover{
+				@extend %menu_nest;
+				&:hover a{
+					color: lighten($ACCENT_COLOR, $hover_lighten);
+				}	
+				&:hover{
+					@extend %menu_nest;
+				}
+			}
+		}
+	}
+	
+//	// 大まかな段組構造		mixinの再起でやりたい(ﾉд')
+//	ul {
+//		//visibility	:	visible;
+//		display		:	block;
+//		
+//		li {
+//			ul {
+//				//visibility	:	hidden;
+//				display		:	none;
+//			}
+//			
+//			&:hover a,
+//			&.current a,
+//			a:hover,
+//			a:active	{
+//				//background-color:	#e9e9c7;
+//				//color	:	darken($ACCENT_COLOR, $hover_lighten);
+//				color	:	lighten($ACCENT_COLOR, $hover_lighten);
+//				
+//			}
+//			
+//			&:hover,
+//			&.current,
+//			a:hover,
+//			a:active {
+//				ul {
+//					//visibility	:	visible;
+//					display		:	block;
+//					
+//					li {
+//						ul {
+//							//visibility	:	hidden;
+//							display		:	none;
+//						}
+//						
+//						&:hover a,
+//						&.current a,
+//						a:hover,
+//						a:active	{
+//							//background-color:	#e9e9c7;
+//							//color	:	darken($ACCENT_COLOR, $hover_lighten);
+//							color	:	lighten($ACCENT_COLOR, $hover_lighten);
+//							
+//						}
+//						
+//						&:hover,
+//						&.current,
+//						a:hover,
+//						a:active {
+//							ul {
+//								//visibility	:	visible;
+//								display		:	block;
+//								
+//								li {
+//									ul {
+//										//visibility	:	hidden;
+//										display		:	none;
+//									}
+//									
+//									&:hover a,
+//									&.current a,
+//									a:hover,
+//									a:active	{
+//										//background-color:	#e9e9c7;
+//										//color	:	darken($ACCENT_COLOR, $hover_lighten);
+//										color	:	lighten($ACCENT_COLOR, $hover_lighten);
+//										
+//									}
+//									
+//									&:hover,
+//									&.current,
+//									a:hover,
+//									a:active {
+//										ul {
+//											//visibility	:	visible;
+//											display		:	block;
+//											
+//											li {
+//												ul {
+//													//visibility	:	hidden;
+//													display		:	none;
+//												}
+//												
+//												&:hover a,
+//												&.current a,
+//												a:hover,
+//												a:active	{
+//													//background-color:	#e9e9c7;
+//													//color	:	darken($ACCENT_COLOR, $hover_lighten);
+//													color	:	lighten($ACCENT_COLOR, $hover_lighten);
+//													
+//												}
+//												
+//												a {
+//													color	:	$ACCENT_COLOR;
+//												}
+//											}
+//										}
+//									}
+//									
+//									a {
+//										color	:	$ACCENT_COLOR;
+//									}
+//								}
+//							}
+//						}
+//						
+//						a {
+//							color	:	$ACCENT_COLOR;
+//						}
+//					}
+//				}
+//			}
+//			
+//			a {
+//				color	:	$ACCENT_COLOR;
+//			}
+//		}
+//	}
 	
 	
 	// 細かな設定

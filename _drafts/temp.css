@@ -1,0 +1,25 @@
+/*@mixin bar{
+	font: {
+		size: 2em;
+		style: italic;
+	}
+}
+
+p {
+	&.foo {
+		@include bar;	// mixin
+	}
+}
+div{
+	@include bar;		// mixin
+	
+	font-style: normal;
+	
+	.black {
+		color: black;
+	}
+}*/
+p.foo, div { font-size: 2em; font-style: italic; }
+
+div { font-style: normal; }
+div .black { color: black; }

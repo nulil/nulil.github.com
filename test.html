@@ -1,0 +1,12 @@
+---
+layout: default
+title:
+---
+{{ page }}
+
+{{ site }}
+
+{% for page in site.pages %} 
+	{{ page.dir }}{{ page.name }}
+	{{ page }}
+{% endfor %}
