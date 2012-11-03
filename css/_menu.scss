@@ -1,4 +1,3 @@
-/*aaa*/
 .menu { 
 	$BASE_COLOR:	$BASE_COLOR !default;
 	$ACCENT_COLOR:	$ACCENT_COLOR !default;
@@ -96,6 +95,63 @@
 					color: lighten($ACCENT_COLOR, $hover_lighten);
 				}	
 				&:hover{
+					@extend %menu_nest;
+				}
+			}
+		}
+		
+		&.current a{
+			color: lighten($ACCENT_COLOR, $hover_lighten);
+		}	
+		&.current{
+			@extend %menu_nest;
+			&.current a{
+				color: lighten($ACCENT_COLOR, $hover_lighten);
+			}	
+			&.current{
+				@extend %menu_nest;
+				&.current a{
+					color: lighten($ACCENT_COLOR, $hover_lighten);
+				}	
+				&.current{
+					@extend %menu_nest;
+				}
+			}
+		}
+		
+		a:hover{
+			color: lighten($ACCENT_COLOR, $hover_lighten);
+		}	
+		a:hover{
+			@extend %menu_nest;
+			a:hover{
+				color: lighten($ACCENT_COLOR, $hover_lighten);
+			}	
+			a:hover{
+				@extend %menu_nest;
+				a:hover{
+					color: lighten($ACCENT_COLOR, $hover_lighten);
+				}	
+				a:hover{
+					@extend %menu_nest;
+				}
+			}
+		}
+		
+		a:focus{
+			color: lighten($ACCENT_COLOR, $hover_lighten);
+		}	
+		a:focus{
+			@extend %menu_nest;
+			a:focus{
+				color: lighten($ACCENT_COLOR, $hover_lighten);
+			}	
+			a:focus{
+				@extend %menu_nest;
+				a:focus{
+					color: lighten($ACCENT_COLOR, $hover_lighten);
+				}	
+				a:focus{
 					@extend %menu_nest;
 				}
 			}
