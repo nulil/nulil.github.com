@@ -270,7 +270,6 @@
 		
 		li {
 			position	:	relative;
-			@include background-rgba( $MAIN_COLOR, 0.25 );
 			
 			img {
 				height	:	2em;
@@ -463,9 +462,5 @@
 				}
 			}
 		}
-	}
-	
-	.search > li {
-		width: 300px;
 	}
 }

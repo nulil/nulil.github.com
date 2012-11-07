@@ -65,7 +65,12 @@ input[type="text"]:not([size]){
 
 
 // menu調整
-.menu{
+.menu {
+	
+	.search > li {
+		width: 300px;
+	}
+	
 	a {
 		font-size	:	1.5em;
 	}
@@ -83,9 +88,11 @@ input[type="text"]:not([size]){
 	li{
 		&:first-child{
 			display	:	none;
+			color: $BASE-COLOR;
 		}
 		&:last-child{
 			display	:	block;
+			color: $BASE-COLOR;
 		}
 	}
 	&.top li{
@@ -103,10 +110,11 @@ input[type="text"]:not([size]){
 			text-align	:	center;
 		}
 		
+		
 		li:hover a,
 		a:hover,
 		a:active{
-			@include background-rgba( $ACCENT_COLOR, 0.25 );
+			@include background-rgba( $ACCENT_COLOR, 0.5 );
 		}
 		li:hover,
 		a:hover,
@@ -117,19 +125,20 @@ input[type="text"]:not([size]){
 			li:hover a,
 			a:hover,
 			a:active{
-				@include background-rgba( $ACCENT_COLOR, 0.25 );
+				@include background-rgba( $ACCENT_COLOR, 0.5 );
 			}
 			
 			li:hover,
 			a:hover,
 			a:active{
 				a{
-					background	:	transparent;
+					//background	:	transparent;
+					@include background-rgba( $MAIN_COLOR, 0.5 );
 				}
 				li:hover a,
 				a:hover,
 				a:active{
-					@include background-rgba( $ACCENT_COLOR, 0.25 );
+					@include background-rgba( $ACCENT_COLOR, 0.5 );
 				}
 				li:hover,
 				a:hover,
@@ -140,7 +149,7 @@ input[type="text"]:not([size]){
 					li:hover a,
 					a:hover,
 					a:active{
-						@include background-rgba( $ACCENT_COLOR, 0.25 );
+						@include background-rgba( $ACCENT_COLOR, 0.5 );
 					}
 				}
 			}
