@@ -18,6 +18,7 @@ pygments: true
 ##  github : username
 ##  twitter : username
 ##  feedburner : feedname
+production_url : http://nulil.github.com
 title : nulil
 tagline: Site Tagline
 description:

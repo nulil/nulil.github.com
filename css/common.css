@@ -5,8 +5,8 @@
 .menu ul ul { z-index: 2147483645; }
 .menu ul ul ul { z-index: 2147483646; }
 .menu ul ul ul ul { z-index: 2147483647; }
-.menu .menu, .menu ul li:hover, .menu ul li:hover li:hover, .menu ul li:hover li:hover li:hover, .menu ul li.current, .menu ul li.current li.current, .menu ul li.current li.current li.current, .menu ul li a:hover, .menu ul li a:hover a:hover, .menu ul li a:hover a:hover a:hover, .menu ul li a:focus, .menu ul li a:focus a:focus, .menu ul li a:focus a:focus a:focus { color: #cadaf5; /*menu_nest color*/ }
-.menu .menu ul, .menu ul li:hover ul, .menu ul li:hover li:hover ul, .menu ul li:hover li:hover li:hover ul, .menu ul li.current ul, .menu ul li.current li.current ul, .menu ul li.current li.current li.current ul, .menu ul li a:hover ul, .menu ul li a:hover a:hover ul, .menu ul li a:hover a:hover a:hover ul, .menu ul li a:focus ul, .menu ul li a:focus a:focus ul, .menu ul li a:focus a:focus a:focus ul { display: block; /*menu_nest block*/ }
+.menu .menu, .menu ul li:hover, .menu ul li:hover li:hover, .menu ul li:hover li:hover li:hover, .menu ul li.current, .menu ul li.current li.current, .menu ul li.current li.current li.current, .menu ul li a:hover, .menu ul li a:hover a:hover, .menu ul li a:hover a:hover a:hover, .menu ul li a:focus, .menu ul li a:focus a:focus, .menu ul li a:focus a:focus a:focus { color: #cadaf5; }
+.menu .menu ul, .menu ul li:hover ul, .menu ul li:hover li:hover ul, .menu ul li:hover li:hover li:hover ul, .menu ul li.current ul, .menu ul li.current li.current ul, .menu ul li.current li.current li.current ul, .menu ul li a:hover ul, .menu ul li a:hover a:hover ul, .menu ul li a:hover a:hover a:hover ul, .menu ul li a:focus ul, .menu ul li a:focus a:focus ul, .menu ul li a:focus a:focus a:focus ul { display: block; }
 .menu .menu ul li ul, .menu ul li:hover ul li ul, .menu ul li:hover li:hover ul li ul, .menu ul li:hover li:hover li:hover ul li ul, .menu ul li.current ul li ul, .menu ul li.current li.current ul li ul, .menu ul li.current li.current li.current ul li ul, .menu ul li a:hover ul li ul, .menu ul li a:hover a:hover ul li ul, .menu ul li a:hover a:hover a:hover ul li ul, .menu ul li a:focus ul li ul, .menu ul li a:focus a:focus ul li ul, .menu ul li a:focus a:focus a:focus ul li ul { display: none; }
 .menu .menu ul li a, .menu ul li:hover ul li a, .menu ul li:hover li:hover ul li a, .menu ul li:hover li:hover li:hover ul li a, .menu ul li.current ul li a, .menu ul li.current li.current ul li a, .menu ul li.current li.current li.current ul li a, .menu ul li a:hover ul li a, .menu ul li a:hover a:hover ul li a, .menu ul li a:hover a:hover a:hover ul li a, .menu ul li a:focus ul li a, .menu ul li a:focus a:focus ul li a, .menu ul li a:focus a:focus a:focus ul li a { color: #1e50a2; }
 .menu ul li:hover a { color: #cadaf5; }
@@ -16,10 +16,10 @@
 .menu ul li.current li.current a { color: #cadaf5; }
 .menu ul li.current li.current li.current a { color: #cadaf5; }
 .menu ul { padding: 0; margin: 0; list-style-type: none; }
-.menu ul li { position: relative; }
+.menu ul li { position: relative; background-color: transparent; -ms-filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#40EAF4FC,endColorstr=#40EAF4FC); filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#40EAF4FC,endColorstr=#40EAF4FC); zoom: 1; background-color: rgba(234, 244, 252, 0.25); }
 .menu ul li img { height: 2em; }
 .menu ul li:hover ul, .menu ul li.current ul, .menu ul li a:hover ul, .menu ul li a:active ul { bottom: 100%; }
-.menu ul li:hover ul li:hover ul, .menu ul li:hover ul li a:hover ul, .menu ul li:hover ul li a:active ul, .menu ul li.current ul li:hover ul, .menu ul li.current ul li a:hover ul, .menu ul li.current ul li a:active ul, .menu ul li a:hover ul li:hover ul, .menu ul li a:hover ul li a:hover ul, .menu ul li a:hover ul li a:active ul, .menu ul li a:active ul li:hover ul, .menu ul li a:active ul li a:hover ul, .menu ul li a:active ul li a:active ul { bottom: 0; }
+.menu ul li:hover ul li:hover ul, .menu ul li:hover ul li.current ul, .menu ul li:hover ul li a:hover ul, .menu ul li:hover ul li a:active ul, .menu ul li.current ul li:hover ul, .menu ul li.current ul li.current ul, .menu ul li.current ul li a:hover ul, .menu ul li.current ul li a:active ul, .menu ul li a:hover ul li:hover ul, .menu ul li a:hover ul li.current ul, .menu ul li a:hover ul li a:hover ul, .menu ul li a:hover ul li a:active ul, .menu ul li a:active ul li:hover ul, .menu ul li a:active ul li.current ul, .menu ul li a:active ul li a:hover ul, .menu ul li a:active ul li a:active ul { bottom: 0; }
 .menu ul li ul { position: absolute; }
 .menu ul li li { padding: 2px; }
 .menu ul li a { padding: 0.25em 0.25em; text-decoration: none; }
@@ -36,6 +36,7 @@
 .menu.right > ul, .menu:not(.left) > ul { margin-right: 0.75em; }
 .menu.right li:hover ul, .menu.right li.current ul, .menu.right li a:hover ul, .menu.right li a:active ul, .menu:not(.left) li:hover ul, .menu:not(.left) li.current ul, .menu:not(.left) li a:hover ul, .menu:not(.left) li a:active ul { right: 0; margin-right: 0.25em; }
 .menu.right li:hover ul li ul, .menu.right li.current ul li ul, .menu.right li a:hover ul li ul, .menu.right li a:active ul li ul, .menu:not(.left) li:hover ul li ul, .menu:not(.left) li.current ul li ul, .menu:not(.left) li a:hover ul li ul, .menu:not(.left) li a:active ul li ul { margin-right: 100%; }
+.menu .search > li { width: 300px; }
 
 .copyright { font-size: 0.6em; position: fixed; bottom: 0; right: 10px; }
 
