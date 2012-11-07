@@ -145,6 +145,7 @@ input[type="text"]:not([size]){
 				a:active{
 					a{
 						//background	:	transparent;
+						@include background-rgba( $MAIN_COLOR, 0.5 );
 					}
 					li:hover a,
 					a:hover,
