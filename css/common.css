@@ -5,21 +5,16 @@
 .menu ul ul { z-index: 2147483645; }
 .menu ul ul ul { z-index: 2147483646; }
 .menu ul ul ul ul { z-index: 2147483647; }
-.menu .menu ul, .menu ul li:hover ul, .menu ul li.current ul, .menu ul li a:hover ul, .menu ul li a:hover a:hover ul, .menu ul li a:hover a:hover a:hover ul, .menu ul li a:focus ul, .menu ul li a:focus a:focus ul, .menu ul li a:focus a:focus a:focus ul { display: block; }
-.menu .menu ul li ul, .menu ul li:hover ul li ul, .menu ul li.current ul li ul, .menu ul li a:hover ul li ul, .menu ul li a:hover a:hover ul li ul, .menu ul li a:hover a:hover a:hover ul li ul, .menu ul li a:focus ul li ul, .menu ul li a:focus a:focus ul li ul, .menu ul li a:focus a:focus a:focus ul li ul { display: none; }
-.menu .menu ul li a, .menu ul li:hover ul li a, .menu ul li.current ul li a, .menu ul li a:hover ul li a, .menu ul li a:hover a:hover ul li a, .menu ul li a:hover a:hover a:hover ul li a, .menu ul li a:focus ul li a, .menu ul li a:focus a:focus ul li a, .menu ul li a:focus a:focus a:focus ul li a { color: #1e50a2; }
+.menu .menu, .menu ul li:hover, .menu ul li:hover li:hover, .menu ul li:hover li:hover li:hover, .menu ul li.current, .menu ul li.current li.current, .menu ul li.current li.current li.current, .menu ul li a:hover, .menu ul li a:hover a:hover, .menu ul li a:hover a:hover a:hover, .menu ul li a:focus, .menu ul li a:focus a:focus, .menu ul li a:focus a:focus a:focus { color: #cadaf5; /*menu_nest color*/ }
+.menu .menu ul, .menu ul li:hover ul, .menu ul li:hover li:hover ul, .menu ul li:hover li:hover li:hover ul, .menu ul li.current ul, .menu ul li.current li.current ul, .menu ul li.current li.current li.current ul, .menu ul li a:hover ul, .menu ul li a:hover a:hover ul, .menu ul li a:hover a:hover a:hover ul, .menu ul li a:focus ul, .menu ul li a:focus a:focus ul, .menu ul li a:focus a:focus a:focus ul { display: block; /*menu_nest block*/ }
+.menu .menu ul li ul, .menu ul li:hover ul li ul, .menu ul li:hover li:hover ul li ul, .menu ul li:hover li:hover li:hover ul li ul, .menu ul li.current ul li ul, .menu ul li.current li.current ul li ul, .menu ul li.current li.current li.current ul li ul, .menu ul li a:hover ul li ul, .menu ul li a:hover a:hover ul li ul, .menu ul li a:hover a:hover a:hover ul li ul, .menu ul li a:focus ul li ul, .menu ul li a:focus a:focus ul li ul, .menu ul li a:focus a:focus a:focus ul li ul { display: none; }
+.menu .menu ul li a, .menu ul li:hover ul li a, .menu ul li:hover li:hover ul li a, .menu ul li:hover li:hover li:hover ul li a, .menu ul li.current ul li a, .menu ul li.current li.current ul li a, .menu ul li.current li.current li.current ul li a, .menu ul li a:hover ul li a, .menu ul li a:hover a:hover ul li a, .menu ul li a:hover a:hover a:hover ul li a, .menu ul li a:focus ul li a, .menu ul li a:focus a:focus ul li a, .menu ul li a:focus a:focus a:focus ul li a { color: #1e50a2; }
 .menu ul li:hover a { color: #cadaf5; }
-.menu ul li:hover:hover a { color: #cadaf5; }
-.menu ul li:hover:hover:hover a { color: #cadaf5; }
+.menu ul li:hover li:hover a { color: #cadaf5; }
+.menu ul li:hover li:hover li:hover a { color: #cadaf5; }
 .menu ul li.current a { color: #cadaf5; }
-.menu ul li.current.current a { color: #cadaf5; }
-.menu ul li.current.current.current a { color: #cadaf5; }
-.menu ul li a:hover { color: #cadaf5; }
-.menu ul li a:hover a:hover { color: #cadaf5; }
-.menu ul li a:hover a:hover a:hover { color: #cadaf5; }
-.menu ul li a:focus { color: #cadaf5; }
-.menu ul li a:focus a:focus { color: #cadaf5; }
-.menu ul li a:focus a:focus a:focus { color: #cadaf5; }
+.menu ul li.current li.current a { color: #cadaf5; }
+.menu ul li.current li.current li.current a { color: #cadaf5; }
 .menu ul { padding: 0; margin: 0; list-style-type: none; }
 .menu ul li { position: relative; }
 .menu ul li img { height: 2em; }

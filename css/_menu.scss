@@ -66,6 +66,7 @@
 //	@include ul-loop(4);
 	
 	%menu_nest{
+		color: lighten($ACCENT_COLOR, $hover_lighten);
 		ul {
 			display: block;
 			li {
@@ -86,15 +87,15 @@
 		}	
 		&:hover{
 			@extend %menu_nest;
-			&:hover a{
+			li:hover a{
 				color: lighten($ACCENT_COLOR, $hover_lighten);
 			}	
-			&:hover{
+			li:hover{
 				@extend %menu_nest;
-				&:hover a{
+				li:hover a{
 					color: lighten($ACCENT_COLOR, $hover_lighten);
 				}	
-				&:hover{
+				li:hover{
 					@extend %menu_nest;
 				}
 			}
@@ -105,33 +106,24 @@
 		}	
 		&.current{
 			@extend %menu_nest;
-			&.current a{
+			li.current a{
 				color: lighten($ACCENT_COLOR, $hover_lighten);
 			}	
-			&.current{
+			li.current{
 				@extend %menu_nest;
-				&.current a{
+				li.current a{
 					color: lighten($ACCENT_COLOR, $hover_lighten);
 				}	
-				&.current{
+				li.current{
 					@extend %menu_nest;
 				}
 			}
 		}
 		
 		a:hover{
-			color: lighten($ACCENT_COLOR, $hover_lighten);
-		}	
-		a:hover{
 			@extend %menu_nest;
 			a:hover{
-				color: lighten($ACCENT_COLOR, $hover_lighten);
-			}	
-			a:hover{
 				@extend %menu_nest;
-				a:hover{
-					color: lighten($ACCENT_COLOR, $hover_lighten);
-				}	
 				a:hover{
 					@extend %menu_nest;
 				}
@@ -139,18 +131,9 @@
 		}
 		
 		a:focus{
-			color: lighten($ACCENT_COLOR, $hover_lighten);
-		}	
-		a:focus{
 			@extend %menu_nest;
 			a:focus{
-				color: lighten($ACCENT_COLOR, $hover_lighten);
-			}	
-			a:focus{
 				@extend %menu_nest;
-				a:focus{
-					color: lighten($ACCENT_COLOR, $hover_lighten);
-				}	
 				a:focus{
 					@extend %menu_nest;
 				}
@@ -300,6 +283,7 @@
 					
 					li {
 						&:hover,
+						&.current,
 						a:hover,
 						a:active {
 							
