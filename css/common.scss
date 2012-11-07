@@ -88,11 +88,11 @@ input[type="text"]:not([size]){
 	li{
 		&:first-child{
 			display	:	none;
-			color: $BASE-COLOR;
+			color: white;//$BASE-COLOR;
 		}
 		&:last-child{
 			display	:	block;
-			color: $BASE-COLOR;
+			color: white;//$BASE-COLOR;
 		}
 	}
 	&.top li{

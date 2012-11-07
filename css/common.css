@@ -5,16 +5,8 @@
 .menu ul ul { z-index: 2147483645; }
 .menu ul ul ul { z-index: 2147483646; }
 .menu ul ul ul ul { z-index: 2147483647; }
-.menu .menu, .menu ul li:hover, .menu ul li:hover li:hover, .menu ul li:hover li:hover li:hover, .menu ul li.current, .menu ul li.current li.current, .menu ul li.current li.current li.current, .menu ul li a:hover, .menu ul li a:hover a:hover, .menu ul li a:hover a:hover a:hover, .menu ul li a:focus, .menu ul li a:focus a:focus, .menu ul li a:focus a:focus a:focus { color: #cadaf5; }
 .menu .menu ul, .menu ul li:hover ul, .menu ul li:hover li:hover ul, .menu ul li:hover li:hover li:hover ul, .menu ul li.current ul, .menu ul li.current li.current ul, .menu ul li.current li.current li.current ul, .menu ul li a:hover ul, .menu ul li a:hover a:hover ul, .menu ul li a:hover a:hover a:hover ul, .menu ul li a:focus ul, .menu ul li a:focus a:focus ul, .menu ul li a:focus a:focus a:focus ul { display: block; }
 .menu .menu ul li ul, .menu ul li:hover ul li ul, .menu ul li:hover li:hover ul li ul, .menu ul li:hover li:hover li:hover ul li ul, .menu ul li.current ul li ul, .menu ul li.current li.current ul li ul, .menu ul li.current li.current li.current ul li ul, .menu ul li a:hover ul li ul, .menu ul li a:hover a:hover ul li ul, .menu ul li a:hover a:hover a:hover ul li ul, .menu ul li a:focus ul li ul, .menu ul li a:focus a:focus ul li ul, .menu ul li a:focus a:focus a:focus ul li ul { display: none; }
-.menu .menu ul li a, .menu ul li:hover ul li a, .menu ul li:hover li:hover ul li a, .menu ul li:hover li:hover li:hover ul li a, .menu ul li.current ul li a, .menu ul li.current li.current ul li a, .menu ul li.current li.current li.current ul li a, .menu ul li a:hover ul li a, .menu ul li a:hover a:hover ul li a, .menu ul li a:hover a:hover a:hover ul li a, .menu ul li a:focus ul li a, .menu ul li a:focus a:focus ul li a, .menu ul li a:focus a:focus a:focus ul li a { color: #1e50a2; }
-.menu ul li:hover a { color: #cadaf5; }
-.menu ul li:hover li:hover a { color: #cadaf5; }
-.menu ul li:hover li:hover li:hover a { color: #cadaf5; }
-.menu ul li.current a { color: #cadaf5; }
-.menu ul li.current li.current a { color: #cadaf5; }
-.menu ul li.current li.current li.current a { color: #cadaf5; }
 .menu ul { padding: 0; margin: 0; list-style-type: none; }
 .menu ul li { position: relative; }
 .menu ul li img { height: 2em; }
@@ -50,8 +42,8 @@ input[type="text"]:not([size]) { width: 10em; }
 .menu a { font-size: 1.5em; }
 .menu ul ul ul a { font-size: 1.2em; }
 .menu ul ul ul ul { width: 8em; }
-.menu li:first-child { display: none; color: #9ec0e2; }
-.menu li:last-child { display: block; color: #9ec0e2; }
+.menu li:first-child { display: none; color: white; }
+.menu li:last-child { display: block; color: white; }
 .menu.top li:first-child { display: block; }
 .menu.top li:last-child { display: none; }
 .menu ul a { -moz-border-radius: 1em; -webkit-border-radius: 1em; -o-border-radius: 1em; -ms-border-radius: 1em; -khtml-border-radius: 1em; border-radius: 1em; text-align: center; }

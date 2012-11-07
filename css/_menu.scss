@@ -66,7 +66,7 @@
 //	@include ul-loop(4);
 	
 	%menu_nest{
-		color: lighten($ACCENT_COLOR, $hover_lighten);
+		//color: lighten($ACCENT_COLOR, $hover_lighten);
 		ul {
 			display: block;
 			li {
@@ -74,7 +74,7 @@
 					display: none;
 				}
 				a {
-					color: $ACCENT_COLOR;
+					//color: $ACCENT_COLOR;
 				}
 			}
 		}
@@ -83,17 +83,17 @@
 	@extend %menu_nest;
 	ul li{
 		&:hover a{
-			color: lighten($ACCENT_COLOR, $hover_lighten);
+			//color: lighten($ACCENT_COLOR, $hover_lighten);
 		}	
 		&:hover{
 			@extend %menu_nest;
 			li:hover a{
-				color: lighten($ACCENT_COLOR, $hover_lighten);
+				//color: lighten($ACCENT_COLOR, $hover_lighten);
 			}	
 			li:hover{
 				@extend %menu_nest;
 				li:hover a{
-					color: lighten($ACCENT_COLOR, $hover_lighten);
+					//color: lighten($ACCENT_COLOR, $hover_lighten);
 				}	
 				li:hover{
 					@extend %menu_nest;
@@ -102,17 +102,17 @@
 		}
 		
 		&.current a{
-			color: lighten($ACCENT_COLOR, $hover_lighten);
+			//color: lighten($ACCENT_COLOR, $hover_lighten);
 		}	
 		&.current{
 			@extend %menu_nest;
 			li.current a{
-				color: lighten($ACCENT_COLOR, $hover_lighten);
+				//color: lighten($ACCENT_COLOR, $hover_lighten);
 			}	
 			li.current{
 				@extend %menu_nest;
 				li.current a{
-					color: lighten($ACCENT_COLOR, $hover_lighten);
+					//color: lighten($ACCENT_COLOR, $hover_lighten);
 				}	
 				li.current{
 					@extend %menu_nest;
@@ -306,7 +306,6 @@
 			
 			a{
 				padding			:	$row_blank $col_blank;
-				//background-color:	#c9c9a7;
 				text:	{
 					decoration	:	none;
 				}
