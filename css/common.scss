@@ -212,3 +212,18 @@ pre {
 		}
 	}
 }
+
+
+#content {
+	
+	ul{
+		&.posts {
+			li{
+				mergin: {
+					bottom: 1em;
+				}
+			}
+		}
+	}
+}
+

@@ -66,3 +66,5 @@ pre { background: #eaf4fc; color: black; padding: 1em; -moz-border-radius: 1em; 
 
 .search .gsc-webResult.gsc-result, .search .gsc-imageResult { background-color: inherit; }
 .search .gsc-webResult.gsc-result:hover, .search .gsc-imageResult:hover { background-color: inherit; }
+
+#content ul.posts li { mergin-bottom: 1em; }
