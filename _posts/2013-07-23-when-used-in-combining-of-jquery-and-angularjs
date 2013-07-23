@@ -1,0 +1,40 @@
+---
+layout: post
+title: "apacheでgit pull"
+date: 2013-04-22 12:00:00
+category : development
+tags: [apache,git,php]
+---
+AngularJSのソースをちょっと覗いたときに気がついたのですが、angular.element の実体は通常 jQueryLite なんですが、window.jQuery が設定されてる（jQuery読みこまれてる）と、jQueryを拡張して、angular.element にするんですね！
+
+ドキュメントに書いてなかったよーなと思ってドキュメント見たら、ちゃんと書いてありましたｗ
+
+
+
+{% highlight coffee %}
+angular.module("mymodule", []).directive("foo", ->
+	{
+		restrict: 'CA'
+		link: (scope, element, attrs)->
+			nexts = jQuery(element).nextAll()
+			#ごにょごにょ
+			return
+	}
+)
+{% endhighlight %}
+
+とか書いてたところは
+
+{% highlight coffee %}
+angular.module("mymodule", []).directive("foo", ->
+	{
+		restrict: 'CA'
+		link: (scope, element, attrs)->
+			nexts = element.nextAll()
+			#ごにょごにょ
+			return
+	}
+)
+{% endhighlight %}
+
+って形に直そう...
