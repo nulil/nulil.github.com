@@ -1,7 +1,7 @@
 # This is the default format. 
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 #permalink: /blog/:categories/:year/:month/:day/:title 
-permalink: /blog/:categories/:title 
+permalink: blog/:categories/:title 
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 auto: true
@@ -31,9 +31,9 @@ author :
 
 
 paginate: 5
-paginate_path: page:num
-#blog_uri: /blog
+paginate_path: blog/page:num
+#blog_uri: blog
 
 
-categories_path : /blog/categories.html
-tags_path : /blog/tags.html
+categories_path : blog/categories.html
+tags_path : blog/tags.html

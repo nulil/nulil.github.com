@@ -11,18 +11,19 @@ OSはCent。
 [GitHubにpushがあったら，自動でpullする環境（on Plesk）のメモ ::ハブろぐ](http://havelog.ayumusato.com/develop/server/e328-nightly_pulling.html)を参考にさせて頂き、リポジトリをapacheの管理下に置く形でやってみて、"一時的に通常ユーザからapache名目で操作できるように変更"までは問題なく進みましたが、その後ハマったので...
 
 
-*参考サイト
-**[GitHubにpushがあったら，自動でpullする環境（on Plesk）のメモ ::ハブろぐ](http://havelog.ayumusato.com/develop/server/e328-nightly_pulling.html)
-**[git-config(1) Manual Page](https://www.kernel.org/pub/software/scm/git/docs/git-config.html#FILES)
-**[ブログ Apache＋PHPで環境変数を追加したい](http://yukke.blog3.fc2.com/blog-entry-68.html)
-**[Linux ユーザ情報の変更 - usermod](http://kazmax.zpp.jp/linux_beginner/usermod.html)
-**[Jenkins@さくらVPSにOctopressのデプロイを任せてみる - TOKOROM BLOG](http://www.tokoro.me/2012/07/29/jenkins-octopress/)
+* 参考サイト
+** [GitHubにpushがあったら，自動でpullする環境（on Plesk）のメモ ::ハブろぐ](http://havelog.ayumusato.com/develop/server/e328-nightly_pulling.html)
+** [git-config(1) Manual Page](https://www.kernel.org/pub/software/scm/git/docs/git-config.html#FILES)
+** [ブログ Apache＋PHPで環境変数を追加したい](http://yukke.blog3.fc2.com/blog-entry-68.html)
+** [Linux ユーザ情報の変更 - usermod](http://kazmax.zpp.jp/linux_beginner/usermod.html)
+** [Jenkins@さくらVPSにOctopressのデプロイを任せてみる - TOKOROM BLOG](http://www.tokoro.me/2012/07/29/jenkins-octopress/)
+
 
 <!--more-->
 
 ## Gitのインストールしてclone
 
-{% highlight shell %}
+{% highlight sh %}
 yum install git
 cd /var/www
 git clone repository subdomain
@@ -36,14 +37,14 @@ Virtual Hostの設定して、サイトルートは subdomain/public にした�
 
 SSH用のパスフレーズなしの鍵作成
 
-{% highlight shell %}
+{% highlight sh %}
 ssh-keygen -t rsa
 {% endhighlight %}
 
 
 /root/.ssh/config に下記追記
 
-{% highlight %}
+{% highlight apache %}
 Host repository_domain
         HostName        repository_domain
         IdentityFile    /root/.ssh/id_rsa
@@ -55,7 +56,7 @@ Host repository_domain
 
 deployers って名前のグループにした
 
-{% highlight shell %}
+{% highlight sh %}
 groupadd deployers
 usermod -G deployers <username>
 usermod -G gitwriters apache
@@ -63,7 +64,7 @@ usermod -G gitwriters apache
 
 ## リポジトリの権限付与
 
-{% highlight shell %}
+{% highlight sh %}
 chgrp -R deployers /var/www/subdomain
 chmod -R g+rw /var/www/subdomain
 find /var/www/subdomain -type d -print0 | xargs -0 chmod g+s
@@ -71,7 +72,7 @@ find /var/www/subdomain -type d -print0 | xargs -0 chmod g+s
 
 ## .ssh 作成
 
-{% highlight shell %}
+{% highlight sh %}
 mkdir /var/www/.ssh
 chown apache /var/www/.ssh
 {% endhighlight %}
@@ -80,14 +81,14 @@ chown apache /var/www/.ssh
 
 visudo 実行して下記追記
 
-{% highlight shell %}
+{% highlight sh %}
 apache ALL=(ALL) NOPASSWD: ALL
 {% endhighlight %}
 
 
 ## apacheユーザーで鍵作成
 
-{% highlight shell %}
+{% highlight sh %}
 sudo -u apache ssh-keygen -t rsa
 {% endhighlight %}
 
@@ -96,7 +97,7 @@ sudo -u apache ssh-keygen -t rsa
 
 ## apacheでpull
 
-{% highlight shell %}
+{% highlight sh %}
 cd /var/www/subdomain
 sudo -u apache git pull
 {% endhighlight %}
@@ -110,7 +111,7 @@ sudo -u apache git pull
 
 そして[ブログ Apache＋PHPで環境変数を追加したい](http://yukke.blog3.fc2.com/blog-entry-68.html)にたどり着き、なんとか $XDG_CONFIG_HOME を設定するところを知る。
 
-{% highlight shell %}
+{% highlight sh %}
 nano /etc/sysconfig/httpd
 export XDG_CONFIG_HOME=/var/www/.config	#追記
 cd /var/www
@@ -130,7 +131,7 @@ chown -R apache .config
 
 で、いろいろすったもんだしたあと、apacheユーザーでログインすればいいんじゃないかと気が付き（気付くの遅すぎ
 
-{% highlight shell %}
+{% highlight sh %}
 usermod -s /bin/bash
 su apache
 cd /var/www/subdomain
